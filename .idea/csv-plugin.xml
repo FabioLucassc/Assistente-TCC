@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\test\Reconhecedor_Google.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\test\Speaker_Vosk.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\test\googleRec.py">
           <value>
             <Attribute>
