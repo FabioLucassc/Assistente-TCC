@@ -1,11 +1,26 @@
 #!/usr/bin/env python3
-
 import argparse
+import json
 import os
 import queue
 import sounddevice as sd
 import vosk
 import sys
+import pyttsx3
+
+### ----------- TEXTO EM VOZ ----------- ###
+
+engine = pyttsx3.init() # object creation
+
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)
+
+def microfone(texto):
+    engine.say(texto)
+    engine.runAndWait()
+
+### ----------- TEXTO EM VOZ ----------- ###
+
 
 q = queue.Queue()
 
@@ -77,6 +92,10 @@ try:
                 data = q.get()
                 if rec.AcceptWaveform(data):
                     print(rec.Result())
+                    # result = rec.Result()
+                    # result = json.loads(result)
+                    # print(type(result))
+
                 else:
                     print(rec.PartialResult())
                 if dump_fn is not None:
