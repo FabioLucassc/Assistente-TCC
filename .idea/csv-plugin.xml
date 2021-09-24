@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\test\Sintese_PyTTSx3.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\test\Speaker_Vosk.py">
           <value>
             <Attribute>

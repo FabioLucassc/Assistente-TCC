@@ -15,7 +15,7 @@ engine = pyttsx3.init() # object creation
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 
-def microfone(texto):
+def falar(texto):
     engine.say(texto)
     engine.runAndWait()
 
@@ -38,10 +38,13 @@ def callback(indata, frames, time, status):
     q.put(bytes(indata))
 
 parser = argparse.ArgumentParser(add_help=False)
+
 parser.add_argument(
     '-l', '--list-devices', action='store_true',
     help='show list of audio devices and exit')
+
 args, remaining = parser.parse_known_args()
+
 if args.list_devices:
     print(sd.query_devices())
     parser.exit(0)
@@ -91,13 +94,18 @@ try:
             while True:
                 data = q.get()
                 if rec.AcceptWaveform(data):
-                    print(rec.Result())
-                    # result = rec.Result()
-                    # result = json.loads(result)
-                    # print(type(result))
+                    # print(rec.Result())
 
-                else:
-                    print(rec.PartialResult())
+                    resultado = rec.Result()
+                    resultado = json.loads(resultado)
+
+                    if resultado is not None:
+                        resultado = resultado['text']
+                        print(resultado)
+                        falar(resultado)
+
+                # else:
+                #     print(rec.PartialResult())
                 if dump_fn is not None:
                     dump_fn.write(data)
 

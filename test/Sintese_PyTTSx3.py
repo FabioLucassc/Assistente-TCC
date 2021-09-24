@@ -25,5 +25,5 @@ engine.stop()
 
 """Saving Voice to a file"""
 # On linux make sure that 'espeak' and 'ffmpeg' are installed
-engine.save_to_file('Teste de gravação de arquivo de síntese de voz em python! Olá Mundo ...!', 'test.mp3')
-engine.runAndWait()
+# engine.save_to_file('Teste de gravação de arquivo de síntese de voz em python! Olá Mundo ...!', 'test.mp3')
+# engine.runAndWait()
