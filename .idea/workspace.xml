@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="TTS Google">
-      <change afterPath="$PROJECT_DIR$/comandos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com resposta a frases reconhecidas (Estatimente)">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1632750788412</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="TTS Google">
+      <created>1632872512475</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1632872512475</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Teste com resposta a frases reconhecidas (Estatimente)">
+      <created>1632872653223</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1632872653223</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +274,7 @@
     <MESSAGE value="Teste PyTTS" />
     <MESSAGE value="Narração com PyTTS" />
     <MESSAGE value="TTS Google" />
-    <option name="LAST_COMMIT_MESSAGE" value="TTS Google" />
+    <MESSAGE value="Teste com resposta a frases reconhecidas (Estatimente)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste com resposta a frases reconhecidas (Estatimente)" />
   </component>
 </project>
