@@ -7,6 +7,7 @@ import sounddevice as sd
 import vosk
 import sys
 import pyttsx3
+import comandos
 
 ### ----------- TEXTO EM VOZ ----------- ###
 
@@ -102,7 +103,10 @@ try:
                     if resultado is not None:
                         resultado = resultado['text']
                         print(resultado)
-                        falar(resultado)
+                        # falar(resultado)
+                        
+                        if resultado == 'que horas são' or resultado == 'me diga as horas':
+                            falar(comandos.SystemInfo.obter_horario())
 
                 # else:
                 #     print(rec.PartialResult())
