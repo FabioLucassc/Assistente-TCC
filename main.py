@@ -107,7 +107,6 @@ try:
                         
                         if resultado == 'que horas são' or resultado == 'me diga as horas':
                             falar(comandos.SystemInfo.obter_horario())
-
                 # else:
                 #     print(rec.PartialResult())
                 if dump_fn is not None:
