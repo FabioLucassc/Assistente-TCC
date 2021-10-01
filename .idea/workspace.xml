@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com resposta a frases reconhecidas (Estatimente)">
-      <change afterPath="$PROJECT_DIR$/pln/teste_dados.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pln/treinamento.yml" afterDir="false" />
+    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com yml">
+      <change afterPath="$PROJECT_DIR$/pln/modelo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,28 +48,7 @@
       <recent name="D:\Users\fabio\OneDrive\Projetos GitHub\Assistente_Py\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.teste_dados">
-    <configuration name="Microfone_Vosk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Assistente_TCC" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Users\fabio\OneDrive\Projetos GitHub\Assistente_TCC\test\Microfone_Vosk.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.modelo">
     <configuration name="Reconhecedor_Google (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Assistente_TCC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,6 +133,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="modelo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Assistente_TCC" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pln" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pln/modelo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="teste_dados" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Assistente_TCC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -178,19 +177,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Sintese_PyTTSx3" />
-      <item itemvalue="Python.Microfone_Vosk" />
       <item itemvalue="Python.Reconhecedor_Google" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.Reconhecedor_Google (1)" />
       <item itemvalue="Python.teste_dados" />
+      <item itemvalue="Python.modelo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.modelo" />
         <item itemvalue="Python.teste_dados" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.Reconhecedor_Google (1)" />
         <item itemvalue="Python.Reconhecedor_Google" />
-        <item itemvalue="Python.Microfone_Vosk" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632872698141</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Teste com yml">
+      <created>1632874935390</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1632874935390</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,6 +315,7 @@
     <MESSAGE value="Narração com PyTTS" />
     <MESSAGE value="TTS Google" />
     <MESSAGE value="Teste com resposta a frases reconhecidas (Estatimente)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Teste com resposta a frases reconhecidas (Estatimente)" />
+    <MESSAGE value="Teste com yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste com yml" />
   </component>
 </project>
