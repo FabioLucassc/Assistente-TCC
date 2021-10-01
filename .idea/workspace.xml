@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com yml">
-      <change afterPath="$PROJECT_DIR$/pln/modelo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseBusca.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseBusca.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <recent name="D:\Users\fabio\OneDrive\Projetos GitHub\Assistente_Py\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.modelo">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Reconhecedor_Google (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Assistente_TCC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,9 +185,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.modelo" />
         <item itemvalue="Python.teste_dados" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.Reconhecedor_Google (1)" />
         <item itemvalue="Python.Reconhecedor_Google" />
       </list>

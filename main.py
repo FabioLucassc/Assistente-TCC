@@ -7,9 +7,9 @@ import sounddevice as sd
 import vosk
 import sys
 import pyttsx3
-<<<<<<< Updated upstream
+
 import comandos
-=======
+
 import bs4 as bs
 import urllib.request
 import spacy
@@ -17,7 +17,7 @@ from spacy.matcher import PhraseMatcher
 from unidecode import unidecode
 from tkinter import *
 from BaseBusca import *
->>>>>>> Stashed changes
+
 
 ### ----------- TEXTO EM VOZ ----------- ###
 
@@ -115,18 +115,18 @@ try:
                     resultado = json.loads(resultado)
 
                     if resultado is not None:
-<<<<<<< Updated upstream
+
                         resultado = resultado['text']
                         print(resultado)
                         # falar(resultado)
                         
                         if resultado == 'que horas são' or resultado == 'me diga as horas':
                             falar(comandos.SystemInfo.obter_horario())
-=======
+
 
                         textbusca = ''
 
-                        conteudo = [resultado['text'] for p in resultado]
+                        conteudo = [unidecode(p) for p in resultado]
 
                         textbusca = ''.join(conteudo)
 
@@ -135,7 +135,7 @@ try:
                         print(busca)
                         falar(busca)
 
->>>>>>> Stashed changes
+
                 # else:
                 #     print(rec.PartialResult())
                 if dump_fn is not None:

@@ -57,8 +57,14 @@ class BaseBusca:
                 endereco[end.name] = end.text
 
         conteudo = ''
+        vazio = ''
 
         for e in endereco:
-          conteudo += str(f'{e}: {endereco[e]}\n')
+            if endereco[e] == None:
+                vazio = 'vazio'
+            else:
+                vazio = e
+
+            conteudo += str(f'{vazio}: {endereco[e]}\n')
 
         return conteudo
