@@ -123,7 +123,6 @@ try:
                         if resultado == 'que horas são' or resultado == 'me diga as horas':
                             falar(comandos.SystemInfo.obter_horario())
 
-
                         textbusca = ''
 
                         conteudo = [unidecode(p) for p in resultado]

@@ -11,6 +11,11 @@ class BaseBusca:
         self.Acoes.append('dolar')
         self.Acoes.append('cep')
 
+        import os, ssl
+        if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+                getattr(ssl, '_create_unverified_context', None)):
+            ssl._create_default_https_context = ssl._create_unverified_context
+
     def Buscar(self, resultado: str):
         for Acao in self.Acoes:
             if resultado.__contains__(Acao):
@@ -24,10 +29,10 @@ class BaseBusca:
 
     def BuscarValorDolar(self):
 
-        dados = urllib.request.urlopen('https://dolarhoje.com')
+        dados = urllib.request.urlopen('https://dolarhoje.com/')
         dados = dados.read()
 
-        dados_html = bs.BeautifulSoup(dados, 'html.parser')
+        dados_html = bs.BeautifulSoup(dados, 'lxml')
 
         dolar = dados_html.find_all(id='nacional')
 
@@ -36,7 +41,7 @@ class BaseBusca:
         conteudo = [p.attrs['value'] for p in dolar]
         conteudo = ''.join(conteudo)
 
-        return str(f'O dólar hoje está{conteudo}')
+        return str(f'O dólar hoje está {conteudo}')
 
     def BuscarCep(self):
 
