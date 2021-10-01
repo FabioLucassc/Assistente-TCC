@@ -7,7 +7,17 @@ import sounddevice as sd
 import vosk
 import sys
 import pyttsx3
+<<<<<<< Updated upstream
 import comandos
+=======
+import bs4 as bs
+import urllib.request
+import spacy
+from spacy.matcher import PhraseMatcher
+from unidecode import unidecode
+from tkinter import *
+from BaseBusca import *
+>>>>>>> Stashed changes
 
 ### ----------- TEXTO EM VOZ ----------- ###
 
@@ -78,6 +88,9 @@ try:
         # soundfile expects an int, sounddevice provides a float:
         args.samplerate = int(device_info['default_samplerate'])
 
+    bs = BaseBusca()
+    bs.Treinar()
+
     model = vosk.Model(args.model)
 
     if args.filename:
@@ -94,6 +107,7 @@ try:
             rec = vosk.KaldiRecognizer(model, args.samplerate)
             while True:
                 data = q.get()
+
                 if rec.AcceptWaveform(data):
                     # print(rec.Result())
 
@@ -101,12 +115,27 @@ try:
                     resultado = json.loads(resultado)
 
                     if resultado is not None:
+<<<<<<< Updated upstream
                         resultado = resultado['text']
                         print(resultado)
                         # falar(resultado)
                         
                         if resultado == 'que horas são' or resultado == 'me diga as horas':
                             falar(comandos.SystemInfo.obter_horario())
+=======
+
+                        textbusca = ''
+
+                        conteudo = [resultado['text'] for p in resultado]
+
+                        textbusca = ''.join(conteudo)
+
+                        busca = bs.Buscar(textbusca)
+
+                        print(busca)
+                        falar(busca)
+
+>>>>>>> Stashed changes
                 # else:
                 #     print(rec.PartialResult())
                 if dump_fn is not None:
