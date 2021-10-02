@@ -48,8 +48,8 @@ print('Maior seq:', maior_sequencia)
 
 dados_entrada = np.zeros((len(entradas), maior_sequencia, len(chars)), dtype='int32')
 
-for i, input in enumerate(entradas):
-    for k, ch in enumerate(input):
+for i, entrada in enumerate(entradas):
+    for k, ch in enumerate(bytes(entrada.encode('utf-8'))):
         dados_entrada[i, k, caractere_index[ch]] = 1.0
 
 # Input Data one-hot encoding -----------------------------------------------------------------------

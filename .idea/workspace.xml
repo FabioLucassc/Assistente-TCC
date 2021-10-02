@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com yml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="IA" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -313,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632874935390</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="IA">
+      <created>1633208977443</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1633208977443</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,6 +341,7 @@
     <MESSAGE value="TTS Google" />
     <MESSAGE value="Teste com resposta a frases reconhecidas (Estatimente)" />
     <MESSAGE value="Teste com yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Teste com yml" />
+    <MESSAGE value="IA" />
+    <option name="LAST_COMMIT_MESSAGE" value="IA" />
   </component>
 </project>
