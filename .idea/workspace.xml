@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="IA" />
+    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="bytes(entrada.encode())" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633208977443</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="bytes(entrada.encode())">
+      <created>1633313519862</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1633313519862</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,6 +349,8 @@
     <MESSAGE value="Teste com resposta a frases reconhecidas (Estatimente)" />
     <MESSAGE value="Teste com yml" />
     <MESSAGE value="IA" />
-    <option name="LAST_COMMIT_MESSAGE" value="IA" />
+    <MESSAGE value="bytes(entrada.encode" />
+    <MESSAGE value="bytes(entrada.encode())" />
+    <option name="LAST_COMMIT_MESSAGE" value="bytes(entrada.encode())" />
   </component>
 </project>
