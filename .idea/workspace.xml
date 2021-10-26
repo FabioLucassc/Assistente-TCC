@@ -191,12 +191,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Sintese_PyTTSx3" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.modelo" />
       <item itemvalue="Python.BaseBusca" />
+      <item itemvalue="Python.Sintese_PyTTSx3" />
       <item itemvalue="Python.gdfgfd" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.main_teste" />
+      <item itemvalue="Python.modelo" />
     </list>
     <recent_temporary>
       <list>
