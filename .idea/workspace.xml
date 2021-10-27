@@ -22,7 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="bytes(entrada.encode())" />
+    <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="bytes(entrada.encode())">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pln/modelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/pln/modelo.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,12 +194,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.BaseBusca" />
       <item itemvalue="Python.Sintese_PyTTSx3" />
-      <item itemvalue="Python.gdfgfd" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.main_teste" />
       <item itemvalue="Python.modelo" />
+      <item itemvalue="Python.BaseBusca" />
+      <item itemvalue="Python.gdfgfd" />
+      <item itemvalue="Python.main_teste" />
     </list>
     <recent_temporary>
       <list>
