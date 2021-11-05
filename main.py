@@ -7,7 +7,6 @@ import sounddevice as sd
 import vosk
 import sys
 import pyttsx3
-
 import comandos
 
 import bs4 as bs
@@ -17,7 +16,7 @@ from spacy.matcher import PhraseMatcher
 from unidecode import unidecode
 from tkinter import *
 from BaseBusca import *
-
+from Google import *
 
 ### ----------- TEXTO EM VOZ ----------- ###
 
@@ -119,7 +118,9 @@ try:
                         resultado = resultado['text']
                         print(resultado)
                         # falar(resultado)
-                        
+
+                        Buscar(resultado)
+
                         if resultado == 'que horas são' or resultado == 'me diga as horas':
                             falar(comandos.SystemInfo.obter_horario())
 
