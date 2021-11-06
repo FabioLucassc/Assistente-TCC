@@ -1,5 +1,5 @@
 comandos:
-  #Comandos realcionados ao Horario
+  #Comandos relacionados ao Horario
   - comando:
     entrada: que horas são ?
     grupo: horario
@@ -8,12 +8,12 @@ comandos:
     entrada: me diga as horas ?
     grupo: horario
     acao: retornarHorario
-  #Comandos realcionados a Data
+  #Comandos relacionados a Data
   - comando:
     entrada: que dia é hoje ?
     grupo: data
     acao: retornarData
-  #Comandos realcionados ao Clima
+  #Comandos relacionados ao Clima
   - comando:
     entrada: previsão do tempo
     grupo: clima
@@ -22,7 +22,7 @@ comandos:
     entrada: qual o clima
     grupo: clima
     acao: retornarTempo
-  #Comandos realcionados a abrir navegador
+  #Comandos relacionados a abrir navegador
   - comando:
     entrada: abrir navegador
     grupo: abrir
