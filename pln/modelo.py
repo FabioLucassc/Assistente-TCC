@@ -20,8 +20,7 @@ maior_sequencia = max([len(bytes(x.encode('utf-8'))) for x in entradas])
 
 print('Maior seq:', maior_sequencia)
 
-# Criar dadosset one-hot (número de examplos, tamanho da seq, num caracteres)
-# Criar dadosset disperso (número de examplos, tamanho da seq)
+# Criar dataset one-hot (número de examplos, tamanho da seq, num caracteres)
 
 # Input dados one-hot encoding
 
@@ -30,14 +29,6 @@ for i, inp in enumerate(entradas):
     for k, ch in enumerate(bytes(inp.encode('utf-8'))):
         dados_entrada[i, k, int(ch)] = 1.0
 
-
-# Input dados sparse
-'''
-dados_entrada = np.zeros((len(entradas), maior_sequencia), dtype='int32')
-for i, input in enumerate(entradas):
-    for k, ch in enumerate(input):
-        dados_entrada[i, k] = chr2idx[ch]
-'''
 
 # Output dados
 
@@ -69,7 +60,7 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc']
 model.fit(dados_entrada, saida_dados, epochs=128)
 
 # Classificar texto em um entidade
-def classify(text):
+def classificar(text):
     # Criar um array de entrada
     x = np.zeros((1, 48, 256), dtype='float32')
 
@@ -84,4 +75,4 @@ def classify(text):
 
 while True:
     text = input('Digite algo: ')
-    classify(text)
+    classificar(text)
