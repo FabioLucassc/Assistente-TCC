@@ -22,6 +22,39 @@ comandos:
     entrada: qual o clima
     grupo: clima
     acao: retornarTempo
+  #Comandos relacionados a Cotação de Moedas
+  - comando:
+    entrada: dólar
+    grupo: cotacao
+    acao: retornarCotaçãoAtual
+  - comando:
+    entrada: qual o valor do dólar
+    grupo: cotacao
+    acao: retornarCotacaoAtual
+  - comando:
+    entrada: dolar
+    grupo: cotacao
+    acao: retornarCotaçãoAtual
+  - comando:
+    entrada: qual o valor do dolar
+    grupo: cotacao
+    acao: retornarCotacaoAtual
+  - comando:
+    entrada: qual a cotação do dólar
+    grupo: cotacao
+    acao: retornarCotacaoAtual
+  - comando:
+    entrada: qual o preço do dólar
+    grupo: cotacao
+    acao: retornarCotacaoAtual
+  - comando:
+    entrada: qual o preço do euro
+    grupo: cotacao
+    acao: retornarCotacaoAtual
+  - comando:
+    entrada: euro
+    grupo: cotacao
+    acao: retornarCotacaoAtual
   #Comandos relacionados a abrir navegador
   - comando:
     entrada: abrir navegador

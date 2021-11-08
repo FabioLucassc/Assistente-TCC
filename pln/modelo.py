@@ -14,7 +14,7 @@ for comando in dados['comandos']:
     saidas.append('{}\{}'.format(comando['acao'], comando['acao']))
 
 
-# Processar texto: palavras, caracteres, bytes, sub-palavras
+# Processar textos reconhecido : palavras, caracteres, bytes ...
 
 maior_sequencia = max([len(bytes(x.encode('utf-8'))) for x in entradas])
 
@@ -22,7 +22,7 @@ print('Maior seq:', maior_sequencia)
 
 # Criar dataset one-hot (número de examplos, tamanho da seq, num caracteres)
 
-# Input dados one-hot encoding
+# entrada de dados one-hot encoding
 
 dados_entrada = np.zeros((len(entradas), maior_sequencia, 256), dtype='float32')
 for i, inp in enumerate(entradas):
@@ -30,21 +30,21 @@ for i, inp in enumerate(entradas):
         dados_entrada[i, k, int(ch)] = 1.0
 
 
-# Output dados
+# saida de dados
 
 labels = set(saidas)
 
-label2idx = {}
-idx2label = {}
+transformar_label2index = {}
+transformar_index2label = {}
 
 for k, label in enumerate(labels):
-    label2idx[label] = k
-    idx2label[k] = label
+    transformar_label2index[label] = k
+    transformar_index2label[k] = label
 
 saida_dados = []
 
-for output in saidas:
-    saida_dados.append(label2idx[output])
+for saida in saidas:
+    saida_dados.append(transformar_label2index[saida])
 
 saida_dados = to_categorical(saida_dados, len(saida_dados))
 
@@ -59,20 +59,23 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc']
 
 model.fit(dados_entrada, saida_dados, epochs=128)
 
-# Classificar texto em um entidade
+# Salvar model
+model.save('model.h5')
+
+# Classificar texto em um grupo
 def classificar(text):
     # Criar um array de entrada
     x = np.zeros((1, 48, 256), dtype='float32')
 
-    # Preencher o array com dados do texto.
+    # Preencher o array com dados do da frase.
     for k, ch in enumerate(bytes(text.encode('utf-8'))):
         x[0, k, int(ch)] = 1.0
 
-    # Fazer a previsão
-    out = model.predict(x)
-    idx = out.argmax()
-    print(idx2label[idx])
+    # Fazer a predição do que foi falado
+    saida = model.predict(x)
+    index = saida.argmax()
+    print(transformar_index2label[index])
 
 while True:
-    text = input('Digite algo: ')
-    classificar(text)
+    frase = input('Escreva Algo: ')
+    classificar(frase)
