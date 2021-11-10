@@ -1,0 +1,6 @@
+retornarData\retornarData
+retornarCotaçãoAtual\retornarCotaçãoAtual
+retornarHorario\retornarHorario
+retornarCotacaoAtual\retornarCotacaoAtual
+None\None
+retornarTempo\retornarTempo

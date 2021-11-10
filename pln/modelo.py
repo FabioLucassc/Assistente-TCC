@@ -34,12 +34,16 @@ for i, inp in enumerate(entradas):
 
 labels = set(saidas)
 
+fwrite = open('labels.txt', 'w', encoding='utf-8')
+
 transformar_label2index = {}
 transformar_index2label = {}
 
 for k, label in enumerate(labels):
     transformar_label2index[label] = k
     transformar_index2label[k] = label
+    fwrite.write(label + '\n')
+fwrite.close()
 
 saida_dados = []
 

@@ -1,18 +1,39 @@
 comandos:
   #Comandos relacionados ao Horario
   - comando:
-    entrada: que horas são ?
+    entrada: que horas sao
     grupo: horario
     acao: retornarHorario
   - comando:
-    entrada: me diga as horas ?
+    entrada: me diga as horas
     grupo: horario
     acao: retornarHorario
-  #Comandos relacionados a Data
   - comando:
-    entrada: que dia é hoje ?
+    entrada: hora
+    grupo: horario
+    acao: retornarHorario
+  - comando:
+    entrada: horas
+    grupo: horario
+    acao: retornarHorario
+  - comando:
+    entrada: horario
+    grupo: horario
+    acao: retornarHorario
+   #Comandos relacionados a Data
+  - comando:
+    entrada: que dia é hoje
     grupo: data
     acao: retornarData
+  - comando:
+    entrada: qual a data de hoje
+    grupo: data
+    acao: retornarData
+  - comando:
+    entrada: data
+    grupo: data
+    acao: retornarData
+
   #Comandos relacionados ao Clima
   - comando:
     entrada: previsão do tempo
@@ -20,6 +41,26 @@ comandos:
     acao: retornarTempo
   - comando:
     entrada: qual o clima
+    grupo: clima
+    acao: retornarTempo
+  - comando:
+    entrada: como esta o tempo
+    grupo: clima
+    acao: retornarTempo
+  - comando:
+    entrada: hoje faz sol
+    grupo: clima
+    acao: retornarTempo
+  - comando:
+    entrada: hoje chove
+    grupo: clima
+    acao: retornarTempo
+  - comando:
+    entrada: sol
+    grupo: clima
+    acao: retornarTempo
+  - comando:
+    entrada: chuva
     grupo: clima
     acao: retornarTempo
   #Comandos relacionados a Cotação de Moedas

@@ -5,15 +5,15 @@ modelo = load_model('model.h5')
 
 labels = open('labels.txt', 'r', encoding='utf-8').read().split('\n')
 
-label2idx = {}
-idx2label = {}
+transformar_label2index = {}
+transformar_index2label = {}
 
 for k, label in enumerate(labels):
-    label2idx[label] = k
-    idx2label[k] = label
+    transformar_label2index[label] = k
+    transformar_index2label[k] = label
 
 # Classificar texto em um entidade
-def classify(text):
+def classificar(text):
     # Criar um array de entrada
     x = np.zeros((1, 48, 256), dtype='float32')
 
@@ -24,4 +24,4 @@ def classify(text):
     # Fazer a previsão
     out = modelo.predict(x)
     idx = out.argmax()
-    return idx2label[idx]
+    return transformar_index2label[idx]

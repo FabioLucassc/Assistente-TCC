@@ -8,6 +8,7 @@ import vosk
 import sys
 import pyttsx3
 import comandos
+from pln.calssificador import classificar
 
 ### ----------- TEXTO EM VOZ ----------- ###
 
