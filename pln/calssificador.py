@@ -2,10 +2,10 @@ from tensorflow.keras.models import load_model
 import numpy as np
 
 # modelo = load_model('pln\modelo.py')
-modelo = load_model('..\model.h5')
+modelo = load_model('model.h5')
 
 
-labels = open('..\labels.txt', 'r', encoding='utf-8').read().split('\n')
+labels = open('labels.txt', 'r', encoding='utf-8').read().split('\n')
 
 transformar_label2index = {}
 transformar_index2label = {}
