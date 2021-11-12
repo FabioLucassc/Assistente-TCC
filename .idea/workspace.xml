@@ -24,11 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com yml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pln/calssificador.py" beforeDir="false" afterPath="$PROJECT_DIR$/pln/calssificador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pln/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/pln/model.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pln/modelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/pln/modelo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pln/treinamento.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pln/treinamento.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/main_teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/main_teste.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
