@@ -1,9 +1,11 @@
 from tensorflow.keras.models import load_model
 import numpy as np
 
-modelo = load_model('model.h5')
+# modelo = load_model('pln\modelo.py')
+modelo = load_model('..\model.h5')
 
-labels = open('labels.txt', 'r', encoding='utf-8').read().split('\n')
+
+labels = open('..\labels.txt', 'r', encoding='utf-8').read().split('\n')
 
 transformar_label2index = {}
 transformar_index2label = {}
@@ -15,7 +17,7 @@ for k, label in enumerate(labels):
 # Classificar texto em um entidade
 def classificar(text):
     # Criar um array de entrada
-    x = np.zeros((1, 48, 256), dtype='float32')
+    x = np.zeros((1, 128, 256), dtype='float32')
 
     # Preencher o array com dados do texto.
     for k, ch in enumerate(bytes(text.encode('utf-8'))):

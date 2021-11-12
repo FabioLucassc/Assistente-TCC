@@ -29,12 +29,12 @@ for i, inp in enumerate(entradas):
     for k, ch in enumerate(bytes(inp.encode('utf-8'))):
         dados_entrada[i, k, int(ch)] = 1.0
 
-
+# falar(resultado)
 # saida de dados
 
 labels = set(saidas)
 
-fwrite = open('labels.txt', 'w', encoding='utf-8')
+fwrite = open('..\labels.txt', 'w', encoding='utf-8')
 
 transformar_label2index = {}
 transformar_index2label = {}
@@ -64,12 +64,12 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc']
 model.fit(dados_entrada, saida_dados, epochs=128)
 
 # Salvar model
-model.save('model.h5')
+model.save('..\model.h5')
 
 # Classificar texto em um grupo
 def classificar(text):
     # Criar um array de entrada
-    x = np.zeros((1, 48, 256), dtype='float32')
+    x = np.zeros((1, 128, 256), dtype='float32')
 
     # Preencher o array com dados do da frase.
     for k, ch in enumerate(bytes(text.encode('utf-8'))):
