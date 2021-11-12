@@ -101,6 +101,10 @@ comandos:
     entrada: abrir navegador
     grupo: abrir
     acao:
+  - comando:
+    entrada:
+    grupo: abrir
+    acao:
 
 
 

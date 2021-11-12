@@ -1,6 +1,6 @@
-retornarHorario\retornarHorario
-retornarCotacaoAtual\retornarCotacaoAtual
+None\None
 retornarTempo\retornarTempo
+retornarCotacaoAtual\retornarCotacaoAtual
 retornarCotaçãoAtual\retornarCotaçãoAtual
 retornarData\retornarData
-None\None
+retornarHorario\retornarHorario

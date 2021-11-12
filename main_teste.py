@@ -115,7 +115,7 @@ try:
                     if grupo == 'retornarHorario\\retornarHorario':
                         falar(comandos.SystemInfo.obter_horario())
 
-                    # falar(resultado)
+                    # falar(resultado e a qual grupo ele pertence)
                     print('Texto: {}  Grupo: {}'.format(resultado, grupo))
 
 
