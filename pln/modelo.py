@@ -57,11 +57,15 @@ print(saida_dados[0])
 
 model = Sequential()
 model.add(LSTM(128))
+model.add(Dense(len(saida_dados), activation='relu'))
+model.add(Dense(len(saida_dados), activation='relu'))
 model.add(Dense(len(saida_dados), activation='softmax'))
+
+
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
 
-model.fit(dados_entrada, saida_dados, epochs=128)
+model.fit(dados_entrada, saida_dados, epochs=512)
 
 # Salvar model
 model.save('..\model.h5')

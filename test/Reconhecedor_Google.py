@@ -1,5 +1,9 @@
 import pyttsx3
 import speech_recognition as sr
+from pln.calssificador import classificar
+import comandos
+
+
 
 # Reconhecedor de voz
 reconhecedor = sr.Recognizer()
@@ -22,5 +26,15 @@ with sr.Microphone() as source:
 
     while True:
         audio = reconhecedor.listen(source)
-        print(reconhecedor.recognize_google(audio, language='pt-BR'))
+        resultado = (reconhecedor.recognize_google(audio, language='pt-BR'))
         falar(reconhecedor.recognize_google(audio, language='pt-BR'))
+
+
+        # Reconhecer a qual grupo pertence o comando
+        grupo = classificar(resultado)
+
+        if grupo == 'retornarHorario\\retornarHorario':
+            falar(comandos.SystemInfo.obter_horario())
+
+        # falar(resultado e a qual grupo ele pertence)
+        print('Texto: {}  Grupo: {}'.format(resultado, grupo))

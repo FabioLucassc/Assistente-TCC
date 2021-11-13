@@ -33,7 +33,6 @@ comandos:
     entrada: data
     grupo: data
     acao: retornarData
-
   #Comandos relacionados ao Clima
   - comando:
     entrada: previsão do tempo
@@ -101,13 +100,3 @@ comandos:
     entrada: abrir navegador
     grupo: abrir
     acao:
-  - comando:
-    entrada:
-    grupo: abrir
-    acao:
-
-
-
-
-
-
