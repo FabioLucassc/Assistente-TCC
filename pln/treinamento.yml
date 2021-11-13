@@ -33,35 +33,39 @@ comandos:
     entrada: data
     grupo: data
     acao: retornarData
+  - comando:
+    entrada: qual a data atual
+    grupo: data
+    acao: retornarData
   #Comandos relacionados ao Clima
   - comando:
     entrada: previsão do tempo
     grupo: clima
-    acao: retornarTempo
+    acao: retornarClima
   - comando:
     entrada: qual o clima
     grupo: clima
-    acao: retornarTempo
+    acao: retornarClima
   - comando:
     entrada: como esta o tempo
     grupo: clima
-    acao: retornarTempo
+    acao: retornarClima
   - comando:
     entrada: hoje faz sol
     grupo: clima
-    acao: retornarTempo
+    acao: retornarClima
   - comando:
     entrada: hoje chove
     grupo: clima
-    acao: retornarTempo
+    acao: retornarClima
   - comando:
     entrada: sol
     grupo: clima
-    acao: retornarTempo
+    acao: retornarClima
   - comando:
     entrada: chuva
     grupo: clima
-    acao: retornarTempo
+    acao: retornarClima
   #Comandos relacionados a Cotação de Moedas
   - comando:
     entrada: dólar
@@ -74,7 +78,7 @@ comandos:
   - comando:
     entrada: dolar
     grupo: cotacao
-    acao: retornarCotaçãoAtual
+    acao: retornarCotacaoAtual
   - comando:
     entrada: qual o valor do dolar
     grupo: cotacao
@@ -95,8 +99,52 @@ comandos:
     entrada: euro
     grupo: cotacao
     acao: retornarCotacaoAtual
-  #Comandos relacionados a abrir navegador
+  #Comandos relacionados a abrir softwares e sites
   - comando:
     entrada: abrir navegador
     grupo: abrir
-    acao:
+    acao: abrirNavegador
+  - comando:
+    entrada: google
+    grupo: abrir
+    acao: acessarGoogle
+  - comando:
+    entrada: abrir google
+    grupo: abrir
+    acao: acessarGoogle
+  - comando:
+    entrada: youtube
+    grupo: abrir
+    acao: acessarYoutube
+  - comando:
+    entrada: abrir youtube
+    grupo: abrir
+    acao: acessarYoutube
+  - comando:
+    entrada: facebook
+    grupo: abrir
+    acao: acessarFacebook
+  - comando:
+    entrada: abrir facebook
+    grupo: abrir
+    acao: acessarFacebook
+  - comando:
+    entrada: instagram
+    grupo: abrir
+    acao: acessarInstagram
+  - comando:
+    entrada: abrir instagram
+    grupo: abrir
+    acao: acessarInstagram
+  - comando:
+    entrada: abrir bloco de notas
+    grupo: abrir
+    acao: notepad
+  - comando:
+    entrada: bloco de notas
+    grupo: abrir
+    acao: notepad
+  - comando:
+    entrada: notepad
+    grupo: abrir
+    acao: notepad

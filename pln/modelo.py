@@ -11,7 +11,7 @@ entradas, saidas = [], []
 
 for comando in dados['comandos']:
     entradas.append(comando['entrada'].lower())
-    saidas.append('{}\{}'.format(comando['acao'], comando['acao']))
+    saidas.append('{}|{}'.format(comando['acao'], comando['acao']))
 
 
 # Processar textos reconhecido : palavras, caracteres, bytes ...
@@ -57,15 +57,14 @@ print(saida_dados[0])
 
 model = Sequential()
 model.add(LSTM(128))
-model.add(Dense(len(saida_dados), activation='relu'))
-model.add(Dense(len(saida_dados), activation='relu'))
 model.add(Dense(len(saida_dados), activation='softmax'))
+
 
 
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
 
-model.fit(dados_entrada, saida_dados, epochs=512)
+model.fit(dados_entrada, saida_dados, epochs=500)
 
 # Salvar model
 model.save('..\model.h5')
@@ -73,7 +72,7 @@ model.save('..\model.h5')
 # Classificar texto em um grupo
 def classificar(text):
     # Criar um array de entrada
-    x = np.zeros((1, 128, 256), dtype='float32')
+    x = np.zeros((1, 48, 256), dtype='float32')
 
     # Preencher o array com dados do da frase.
     for k, ch in enumerate(bytes(text.encode('utf-8'))):

@@ -1,3 +1,5 @@
+import os
+
 import pyttsx3
 import speech_recognition as sr
 from numpy.core._dtype import __str__
@@ -30,7 +32,7 @@ with sr.Microphone() as source:
         try:
 
             audio = reconhecedor.listen(source)
-            resultado = (reconhecedor.recognize_google(audio, language='pt-BR'))
+            resultado = (reconhecedor.recognize_google(audio, language='pt-BR')).lower()
 
             if resultado is not None:
 
@@ -38,13 +40,47 @@ with sr.Microphone() as source:
                 # falar(reconhecedor.recognize_google(audio, language='pt-BR'))
 
                 # Reconhecer a qual grupo pertence o comando
-
                 grupo = classificar(resultado)
 
-                if grupo == 'retornarHorario\\retornarHorario':
+                if grupo == 'retornarHorario|retornarHorario':
                     falar(comandos.SystemInfo.obter_horario())
 
+                elif grupo == 'retornarData|retornarData':
+                    falar(comandos.SystemInfo.obter_data())
+                    
+                    # Abrir softwares listados
+                elif grupo == 'abrir|notepad':
+                    falar('Abrindo o bloco de notas')
+                    os.system('notepad.exe')
+
+                elif grupo == 'abrir|abrirNavegador':
+                    falar('Abrindo o navegador')
+                    comandos.SystemInfo.abrir_navegador()
+
+                    # Abrir softwares sites
+                elif grupo == 'abrir|acessarGoogle':
+                    falar('Acessando Google')
+                    comandos.SystemInfo.abrir_google()
+
+                elif grupo == 'abrir|acessarYoutube':
+                    falar('Acessando Youtube')
+                    comandos.SystemInfo.abrir_youtube()
+
+                elif grupo == 'abrir|acessarFacebook':
+                    falar('Acessando Facebook')
+                    comandos.SystemInfo.abrir_facebook()
+
+                elif grupo == 'abrir|acessarInstagram':
+                    falar('Acessando Instragram')
+                    comandos.SystemInfo.abrir_instagram()
+
+
+
+
                 # falar(resultado e a qual grupo ele pertence)
-                print('Texto: {}-Grupo: {}'.format(resultado, grupo))
+                print('Texto: {} - Grupo: {}'.format(resultado, grupo))
+
+
+
         except Exception:
             print(Exception)

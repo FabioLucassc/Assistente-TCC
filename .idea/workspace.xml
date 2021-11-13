@@ -23,15 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com yml">
-      <change afterPath="$PROJECT_DIR$/google_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comandos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/comandos/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/google_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.h5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pln/calssificador.py" beforeDir="false" afterPath="$PROJECT_DIR$/pln/calssificador.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pln/modelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/pln/modelo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pln/treinamento.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pln/treinamento.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Reconhecedor_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/Reconhecedor_Google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
       <recent name="D:\Documentos\GitHub\Assistente-TCC" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.modelo">
+  <component name="RunManager" selected="Python.google_main">
     <configuration name="Reconhecedor_Google" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Assistente_TCC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,8 +214,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.modelo" />
         <item itemvalue="Python.google_main" />
+        <item itemvalue="Python.modelo" />
         <item itemvalue="Python.main_teste (1)" />
         <item itemvalue="Python.Reconhecedor_Google" />
         <item itemvalue="Python.main" />
@@ -352,15 +351,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Teste com yml" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/google_main.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="load_model._keras_api_names_v1" language="Python" />

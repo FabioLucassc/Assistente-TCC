@@ -1,6 +1,11 @@
-retornarCotaçãoAtual\retornarCotaçãoAtual
-retornarHorario\retornarHorario
-retornarCotacaoAtual\retornarCotacaoAtual
-retornarData\retornarData
-retornarTempo\retornarTempo
-None\None
+retornarCotacaoAtual|retornarCotacaoAtual
+notepad|notepad
+acessarGoogle|acessarGoogle
+retornarCotaçãoAtual|retornarCotaçãoAtual
+retornarHorario|retornarHorario
+retornarClima|retornarClima
+abrirNavegador|abrirNavegador
+retornarData|retornarData
+acessarYoutube|acessarYoutube
+acessarFacebook|acessarFacebook
+acessarInstagram|acessarInstagram
