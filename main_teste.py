@@ -109,49 +109,11 @@ try:
                 resultado = json.loads(resultado)
 
                 if resultado is not None:
-                    resultado = resultado['text']
 
-                    # Reconhecer a qual grupo pertence o comando
                     resultado = unidecode(resultado)
-                    # falar(reconhecedor.recognize_google(audio, language='pt-BR'))
 
-                    # Reconhecer a qual grupo pertence o comando
                     if resultado != "":
-                        grupo = classificar(resultado)
-
-                        if grupo == 'horario|retornarHorario':
-                            falar(comandos.SystemInfo.obter_horario())
-
-                        elif grupo == 'data|retornarData':
-                            falar(comandos.SystemInfo.obter_data())
-
-                            # Abrir softwares listados
-                        elif grupo == 'abrir|notepad':
-                            falar('Abrindo o bloco de notas')
-                            os.system('notepad.exe')
-
-                        elif grupo == 'abrir|abrirNavegador':
-                            falar('Abrindo o navegador')
-                            comandos.SystemInfo.abrir_navegador()
-
-                            # Abrir softwares sites
-                        elif grupo == 'abrir|acessarGoogle':
-                            falar('Acessando Google')
-                            comandos.SystemInfo.abrir_google()
-
-                        elif grupo == 'abrir|acessarYoutube':
-                            falar('Acessando Youtube')
-                            comandos.SystemInfo.abrir_youtube()
-
-                        elif grupo == 'abrir|acessarFacebook':
-                            falar('Acessando Facebook')
-                            comandos.SystemInfo.abrir_facebook()
-
-                        elif grupo == 'abrir|acessarInstagram':
-                            falar('Acessando Instragram')
-                            comandos.SystemInfo.abrir_instagram()
-
-                        print('Texto: {} - Grupo: {}'.format(resultado, grupo))
+                        comandos.Executar.excutar_comandos(resultado)
 
             # else:
             #     print(rec.PartialResult())

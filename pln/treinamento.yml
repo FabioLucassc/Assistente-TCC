@@ -169,4 +169,39 @@ comandos:
     entrada: boa tarde
     grupo: cumprimento
     acao: responderCumprimento
+  #Comandos relacionados a pesquisas
+  - comando:
+    entrada: localizar cep
+    grupo: pesquisa
+    acao: buscarCep
+  - comando:
+    entrada: cep
+    grupo: pesquisa
+    acao: buscarCep
+  - comando:
+    entrada: pesquisar
+    grupo: pesquisa
+    acao: pesquisaWeb
+  - comando:
+    entrada: procurar
+    grupo: pesquisa
+    acao: pesquisaWeb
+  - comando:
+    entrada: pesquisa
+    grupo: pesquisa
+    acao: pesquisaWeb
+  - comando:
+    entrada: pesquise para mim
+    grupo: pesquisa
+    acao: pesquisaWeb
+  - comando:
+    entrada: procure para mim
+    grupo: pesquisa
+    acao: pesquisaWeb
+
+
+
+
+
+
 
