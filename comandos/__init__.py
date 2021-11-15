@@ -4,6 +4,7 @@ import string
 import subprocess
 import webbrowser as wb
 import pyttsx3
+from ClassificadorImagens import classificar_imagem
 from pln.calssificador import classificar
 import urllib.request, json
 
@@ -162,7 +163,6 @@ class Executar:
             falar(SystemInfo.obter_horario())
         elif grupo == 'data|retornarData':
             falar(SystemInfo.obter_data())
-
             # Abrir softwares listados
         elif grupo == 'cumprimento|responderCumprimento':
             falar(SystemInfo.cumprimentar())
@@ -173,7 +173,6 @@ class Executar:
         elif grupo == 'abrir|abrirNavegador':
             falar('Abrindo o navegador')
             SystemInfo.abrir_navegador()
-
             # Abrir softwares sites
         elif grupo == 'abrir|acessarGoogle' and 'google' in frase:
             falar('Acessando Google')
@@ -211,7 +210,9 @@ class Executar:
         elif grupo == 'pesquisa|pesquisaWeb':
             falar('Ok, já estou pesquisando o\'que você me disse!')
             SystemInfo.pesquisar_internet(frase)
-
+        elif grupo == 'classificar|classificarImagens':
+            falar('Ok, já estou abrindo a seleção de pastas para que você possa escolher os locais de treinamento e teste!')
+            classificar_imagem()
 
         # falar(resultado e a qual grupo ele pertence)
         print('Texto: {} - Grupo: {}'.format(frase, grupo))

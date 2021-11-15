@@ -1,10 +1,9 @@
 import tensorflow as tf
-from tensorflow.keras.models import  Sequential
+from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPool2D, Flatten, Dense
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import zipfile
 import numpy as np
-from sklearn.metrics import accuracy_score
 import time
 
 def get_key(my_dict, val):

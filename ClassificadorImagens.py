@@ -1,8 +1,7 @@
 import RedesNeuraisConvolucionais as RNC
 from tkinter.filedialog import askdirectory
 
-
-def Classificar():
+def classificar_imagem():
     caminhoTreinamento = askdirectory()
     caminhoTeste = askdirectory()
 
