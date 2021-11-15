@@ -1,6 +1,7 @@
 import pyttsx3
 import speech_recognition as sr
 from unidecode import unidecode
+
 import comandos
 
 reconhecedor = sr.Recognizer()
@@ -9,7 +10,6 @@ comandos.boas_vindas()
 
 # Utilizar o microfone para capturar audio
 with sr.Microphone() as source:
-
     while True:
 
         try:

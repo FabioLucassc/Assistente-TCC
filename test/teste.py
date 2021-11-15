@@ -1,22 +1,35 @@
-import string
-import urllib.request, json
-import re
+from tensorflow.keras.models import load_model
+import numpy as np
 
-with urllib.request.urlopen("https://economia.awesomeapi.com.br/json/last/USD-BRL") as url:
-    data = json.loads(url.read().decode())
-valor = round(float(data['USDBRL']['ask']), 2)
-# print(valor)
+# modelo = load_model('pln\modelo.py')
+modelo = load_model('model.h5')
+
+labels = open('labels.txt', 'r', encoding='utf-8').read().split('\n')
+
+transformar_label2index = {}
+transformar_index2label = {}
+
+for k, label in enumerate(labels):
+    transformar_label2index[label] = k
+    transformar_index2label[k] = label
 
 
-with urllib.request.urlopen("https://viacep.com.br/ws/13221251/json/") as url:
-    data = json.loads(url.read().decode())
-print(data)
-print(data['logradouro'])
+# Classificar texto em um entidade
+def classificar(text):
+    # Criar um array de entrada
+    x = np.zeros((1, 48, 256), dtype='float32')
 
-temp_string = "buscar cep 13221-251"
+    # Preencher o array com dados do texto.
+    for k, ch in enumerate(bytes(text.encode('utf-8'))):
+        x[0, k, int(ch)] = 1.0
 
-out = temp_string.translate(str.maketrans('', '', string.punctuation))
-numbers = [int(temp)for temp in out.split() if temp.isdigit()]
-cep_limpo = ''.join(char for char in str(numbers) if char.isalnum())
+    # Fazer a previsão
+    out = modelo.predict(x)
+    score = modelo.score()
+    print(score)
+    idx = out.argmax()
+    return transformar_index2label[idx]
 
-print(cep_limpo)
+while True:
+    text = input('Digite algo: ')
+    print(classificar(text))

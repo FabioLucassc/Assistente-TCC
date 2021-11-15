@@ -14,23 +14,26 @@ voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 engine.setProperty('rate', 135)
 
+
 def falar(texto):
     engine.say(texto)
     engine.runAndWait()
+
+
 ### ----------- TEXTO EM VOZ ----------- ###
 
 def boas_vindas():
-
     Horario = int(datetime.datetime.now().hour)
 
     if Horario >= 0 and Horario < 12:
         falar('Bom dia, em que posso ajudar ?')
 
     elif Horario >= 12 and Horario < 18:
-         falar('Bom tarde, em que posso ajudar ?')
+        falar('Boa tarde, em que posso ajudar ?')
 
     elif Horario >= 18 and Horario != 0:
-        falar('Bom noite, em que posso ajudar ?')
+        falar('Boa noite, em que posso ajudar ?')
+
 
 class SystemInfo:
     def __init__(self):
@@ -81,7 +84,8 @@ class SystemInfo:
         now = datetime.datetime.now()
         valor = round(float(data['USDBRL']['ask']), 2)
 
-        resposta = 'O valor do Dólar é R$ {}, valor atualizado às {} horas e {} minutos'.format(valor, now.hour, now.minute)
+        resposta = 'O valor do Dólar é R$ {}, valor atualizado às {} horas e {} minutos'.format(valor, now.hour,
+                                                                                                now.minute)
         return resposta
 
     @staticmethod
@@ -93,11 +97,11 @@ class SystemInfo:
         valor = round(float(data['EURBRL']['ask']), 2)
 
         resposta = 'O valor do Euro é R$ {}, valor atualizado às {} horas e {} minutos'.format(valor, now.hour,
-                                                                                                now.minute)
+                                                                                               now.minute)
         return resposta
 
     @staticmethod
-    def buscar_endereço(cep):
+    def buscar_endereco(cep):
 
         temp_string = cep
         out = temp_string.translate(str.maketrans('', '', string.punctuation))
@@ -107,9 +111,44 @@ class SystemInfo:
         with urllib.request.urlopen(f"https://viacep.com.br/ws/{cep_limpo}/json/") as url:
             data = json.loads(url.read().decode())
 
-        resposta = 'O CEP informado está localizado no estado {}, na cidade de {}, no bairro {}, {}'.format(data['uf'],data['localidade'],data['bairro'],data['logradouro'])
+        resposta = 'O CEP informado está localizado no estado {}, na cidade de {}, no bairro {}, {}'.format(data['uf'],
+                                                                                                            data[
+                                                                                                                'localidade'],
+                                                                                                            data[
+                                                                                                                'bairro'],
+                                                                                                            data[
+                                                                                                                'logradouro'])
 
         return resposta
+
+    @staticmethod
+    def cumprimentar():
+
+        Horario = int(datetime.datetime.now().hour)
+
+        if Horario >= 0 and Horario < 12:
+            resposta = 'Olá, Bom dia, tudo bem com você ? espero que sim. Em que posso ajudar ?'
+
+        elif Horario >= 12 and Horario < 18:
+            resposta = 'Olá, Boa tarde, tudo bem com você ? espero que sim. Em que posso ajudar ?'
+
+        elif Horario >= 18 and Horario != 0:
+            resposta = 'Olá, Boa noite, tudo bem com você ? espero que sim. Em que posso ajudar ?'
+
+        return resposta
+
+    @staticmethod
+    def pesquisar_internet(pesquisa):
+
+
+        remover_palavras = ['pesquisar', 'pesquise', 'busque', 'buscar', 'procure', 'procurar']
+        lista_frase = pesquisa.split()
+
+        result = [palavra for palavra in lista_frase if palavra.lower() not in remover_palavras]
+
+        retorno = ' '.join(result)
+
+        return wb.open_new_tab('http://google.com/search?q='+ retorno)
 
 
 class Executar:
@@ -125,6 +164,9 @@ class Executar:
             falar(SystemInfo.obter_data())
 
             # Abrir softwares listados
+        elif grupo == 'cumprimento|responderCumprimento':
+            falar(SystemInfo.cumprimentar())
+            # Abrir softwares listados
         elif grupo == 'abrir|notepad':
             falar('Abrindo o bloco de notas')
             subprocess.Popen('notepad.exe')
@@ -136,15 +178,27 @@ class Executar:
         elif grupo == 'abrir|acessarGoogle' and 'google' in frase:
             falar('Acessando Google')
             SystemInfo.abrir_google()
+        elif grupo == 'abrir|acessarGoogle' and 'google' not in frase:
+            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            SystemInfo.pesquisar_internet(frase)
         elif grupo == 'abrir|acessarYoutube' and 'youtube' in frase:
             falar('Acessando Youtube')
             SystemInfo.abrir_youtube()
-        elif grupo == 'abrir|acessarFacebook' and 'facebook' in frase :
+        elif grupo == 'abrir|acessarGoogle' and 'youtube' not in frase:
+            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            SystemInfo.pesquisar_internet(frase)
+        elif grupo == 'abrir|acessarFacebook' and 'facebook' in frase:
             falar('Acessando Facebook')
             SystemInfo.abrir_facebook()
+        elif grupo == 'abrir|acessarGoogle' and 'facebook' not in frase:
+            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            SystemInfo.pesquisar_internet(frase)
         elif grupo == 'abrir|acessarInstagram' and 'instagram' in frase:
             falar('Acessando Instragram')
             SystemInfo.abrir_instagram()
+        elif grupo == 'abrir|acessarGoogle' and 'instagram' not in frase:
+            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            SystemInfo.pesquisar_internet(frase)
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'dolar' in frase:
             falar('Buscando valor atual do dólar ...')
             falar(SystemInfo.obter_dolar())
@@ -153,8 +207,11 @@ class Executar:
             falar(SystemInfo.obter_dolar())
         elif grupo == 'pesquisa|buscarCep':
             falar('Buscando o CEP informado ...')
-            falar(SystemInfo.buscar_endereço(frase))
+            falar(SystemInfo.buscar_endereco(frase))
+        elif grupo == 'pesquisa|pesquisaWeb':
+            falar('Ok, já estou pesquisando o\'que você me disse!')
+            SystemInfo.pesquisar_internet(frase)
 
 
-        # # falar(resultado e a qual grupo ele pertence)
+        # falar(resultado e a qual grupo ele pertence)
         print('Texto: {} - Grupo: {}'.format(frase, grupo))

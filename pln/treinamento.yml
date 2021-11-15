@@ -198,7 +198,19 @@ comandos:
     entrada: procure para mim
     grupo: pesquisa
     acao: pesquisaWeb
-#Comandos relacionados a classificação de imagem
+  - comando:
+    entrada: buscar
+    grupo: pesquisa
+    acao: pesquisaWeb
+  - comando:
+    entrada: busque
+    grupo: pesquisa
+    acao: pesquisaWeb
+  - comando:
+    entrada: busque para mim
+    grupo: pesquisa
+    acao: pesquisaWeb
+  #Comandos relacionados a classificação de imagem
   - comando:
     entrada: classicar imagens
     grupo: classificar
@@ -215,3 +227,20 @@ comandos:
     entrada: identifique essas imagens
     grupo: classificar
     acao: classificarImagens
+  #Comandos relacionados a classificação de imagem
+  - comando:
+    entrada: encerrar
+    grupo: encerrar
+    acao: fecharAssistente
+  - comando:
+    entrada: deligar
+    grupo: encerrar
+    acao: fecharAssistente
+  - comando:
+    entrada: fechar
+    grupo: encerrar
+    acao: fecharAssistente
+  - comando:
+    entrada: desativar
+    grupo: encerrar
+    acao: fecharAssistente

@@ -13,7 +13,6 @@ for comando in dados['comandos']:
     entradas.append(comando['entrada'].lower())
     saidas.append('{}|{}'.format(comando['grupo'], comando['acao']))
 
-
 # Processar textos reconhecido : palavras, caracteres, bytes ...
 
 maior_sequencia = max([len(bytes(x.encode('utf-8'))) for x in entradas])
@@ -52,15 +51,11 @@ for saida in saidas:
 
 saida_dados = to_categorical(saida_dados, len(saida_dados))
 
-
 print(saida_dados[0])
 
 model = Sequential()
 model.add(LSTM(128))
 model.add(Dense(len(saida_dados), activation='softmax'))
-
-
-
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
 
@@ -68,6 +63,7 @@ model.fit(dados_entrada, saida_dados, epochs=500)
 
 # Salvar model
 model.save('..\model.h5')
+
 
 # Classificar texto em um grupo
 def classificar(text):
@@ -82,6 +78,7 @@ def classificar(text):
     saida = model.predict(x)
     index = saida.argmax()
     print(transformar_index2label[index])
+
 
 while True:
     frase = input('Escreva Algo: ')
