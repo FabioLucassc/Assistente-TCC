@@ -24,9 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com yml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comandos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/comandos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/google_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/teste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassificadorImagens.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificadorImagens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedesNeuraisConvolucionais.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedesNeuraisConvolucionais.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,12 +200,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Sintese_PyTTSx3" />
-      <item itemvalue="Python.google_main" />
-      <item itemvalue="Python.teste" />
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.Executar" />
+      <item itemvalue="Python.Sintese_PyTTSx3" />
       <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.google_main" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.teste" />
     </list>
     <recent_temporary>
       <list>
