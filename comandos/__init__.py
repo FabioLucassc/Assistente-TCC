@@ -1,5 +1,6 @@
 import datetime
 import os
+import string
 import webbrowser as wb
 import pyttsx3
 from pln.calssificador import classificar
@@ -85,6 +86,21 @@ class SystemInfo:
                                                                                                 now.minute)
         return resposta
 
+    @staticmethod
+    def buscar_endereço(cep):
+
+        temp_string = cep
+        out = temp_string.translate(str.maketrans('', '', string.punctuation))
+        numbers = [int(temp) for temp in out.split() if temp.isdigit()]
+        cep_limpo = ''.join(char for char in str(numbers) if char.isalnum())
+
+        with urllib.request.urlopen(f"https://viacep.com.br/ws/{cep_limpo}/json/") as url:
+            data = json.loads(url.read().decode())
+
+        resposta = 'O CEP informado está localizado no estado {}, na cidade de {}, no bairro {}, {}'.format(data['uf'],data['localidade'],data['bairro'],data['logradouro'])
+
+        return resposta
+
 
 class Executar:
 
@@ -95,7 +111,6 @@ class Executar:
 
         if grupo == 'horario|retornarHorario':
             falar(SystemInfo.obter_horario())
-
         elif grupo == 'data|retornarData':
             falar(SystemInfo.obter_data())
 
@@ -103,7 +118,6 @@ class Executar:
         elif grupo == 'abrir|notepad':
             falar('Abrindo o bloco de notas')
             os.system('notepad.exe')
-
         elif grupo == 'abrir|abrirNavegador':
             falar('Abrindo o navegador')
             SystemInfo.abrir_navegador()
@@ -112,26 +126,24 @@ class Executar:
         elif grupo == 'abrir|acessarGoogle':
             falar('Acessando Google')
             SystemInfo.abrir_google()
-
         elif grupo == 'abrir|acessarYoutube':
             falar('Acessando Youtube')
             SystemInfo.abrir_youtube()
-
         elif grupo == 'abrir|acessarFacebook':
             falar('Acessando Facebook')
             SystemInfo.abrir_facebook()
-
         elif grupo == 'abrir|acessarInstagram':
             falar('Acessando Instragram')
             SystemInfo.abrir_instagram()
-
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'dolar' in frase:
             falar('Buscando valor atual do dólar ...')
             falar(SystemInfo.obter_dolar())
-
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'euro' in frase:
             falar('Buscando valor atual do euro ...')
             falar(SystemInfo.obter_dolar())
+        elif grupo == 'pesquisa|buscarCep':
+            falar('Buscando o CEP informado ...')
+            falar(SystemInfo.buscar_endereço(frase))
 
 
 
