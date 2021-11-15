@@ -148,3 +148,25 @@ comandos:
     entrada: notepad
     grupo: abrir
     acao: notepad
+  - comando:
+    entrada: calculadora
+    grupo: abrir
+    acao: abrirCalculadora
+  - comando:
+    entrada: abrir calculadora
+    grupo: abrir
+    acao: abrirCalculadora
+  #Comandos relacionados a cumprimentos
+  - comando:
+    entrada: boa noite
+    grupo: cumprimento
+    acao: responderCumprimento
+  - comando:
+    entrada: bom dia
+    grupo: cumprimento
+    acao: responderCumprimento
+  - comando:
+    entrada: boa tarde
+    grupo: cumprimento
+    acao: responderCumprimento
+

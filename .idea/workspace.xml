@@ -23,7 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44ce717-26f9-4d0d-b072-3c0a1f924f4f" name="Default Changelist" comment="Teste com yml">
+      <change afterPath="$PROJECT_DIR$/test/teste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_teste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pln/modelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/pln/modelo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pln/treinamento.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pln/treinamento.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.mp3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="discord-application" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -70,28 +78,7 @@
       <recent name="D:\Documentos\GitHub\Assistente-TCC" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.google_main">
-    <configuration name="Reconhecedor_Google" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Assistente_TCC" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/Reconhecedor_Google.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="Sintese_PyTTSx3" type="PythonConfigurationType" factoryName="Python">
       <module name="Assistente_TCC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,21 +184,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Assistente_TCC" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/teste.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Sintese_PyTTSx3" />
       <item itemvalue="Python.modelo" />
       <item itemvalue="Python.main_teste (1)" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.Reconhecedor_Google" />
       <item itemvalue="Python.google_main" />
+      <item itemvalue="Python.teste" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.main_teste (1)" />
         <item itemvalue="Python.google_main" />
         <item itemvalue="Python.modelo" />
-        <item itemvalue="Python.main_teste (1)" />
-        <item itemvalue="Python.Reconhecedor_Google" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.teste" />
       </list>
     </recent_temporary>
   </component>

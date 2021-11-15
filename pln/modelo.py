@@ -11,7 +11,7 @@ entradas, saidas = [], []
 
 for comando in dados['comandos']:
     entradas.append(comando['entrada'].lower())
-    saidas.append('{}|{}'.format(comando['acao'], comando['acao']))
+    saidas.append('{}|{}'.format(comando['grupo'], comando['acao']))
 
 
 # Processar textos reconhecido : palavras, caracteres, bytes ...
