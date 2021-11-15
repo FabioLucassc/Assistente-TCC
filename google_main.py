@@ -5,6 +5,8 @@ import comandos
 
 reconhecedor = sr.Recognizer()
 
+comandos.boas_vindas()
+
 # Utilizar o microfone para capturar audio
 with sr.Microphone() as source:
 

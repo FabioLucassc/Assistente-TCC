@@ -1,26 +1,36 @@
 import datetime
 import os
 import string
+import subprocess
 import webbrowser as wb
 import pyttsx3
 from pln.calssificador import classificar
 import urllib.request, json
 
 ### ----------- TEXTO EM VOZ ----------- ###
-
 engine = pyttsx3.init()  # object creation
 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 engine.setProperty('rate', 135)
 
-
 def falar(texto):
     engine.say(texto)
     engine.runAndWait()
-
 ### ----------- TEXTO EM VOZ ----------- ###
 
+def boas_vindas():
+
+    Horario = int(datetime.datetime.now().hour)
+
+    if Horario >= 0 and Horario < 12:
+        falar('Bom dia, em que posso ajudar ?')
+
+    elif Horario >= 12 and Horario < 18:
+         falar('Bom tarde, em que posso ajudar ?')
+
+    elif Horario >= 18 and Horario != 0:
+        falar('Bom noite, em que posso ajudar ?')
 
 class SystemInfo:
     def __init__(self):
@@ -117,22 +127,22 @@ class Executar:
             # Abrir softwares listados
         elif grupo == 'abrir|notepad':
             falar('Abrindo o bloco de notas')
-            os.system('notepad.exe')
+            subprocess.Popen('notepad.exe')
         elif grupo == 'abrir|abrirNavegador':
             falar('Abrindo o navegador')
             SystemInfo.abrir_navegador()
 
             # Abrir softwares sites
-        elif grupo == 'abrir|acessarGoogle':
+        elif grupo == 'abrir|acessarGoogle' and 'google' in frase:
             falar('Acessando Google')
             SystemInfo.abrir_google()
-        elif grupo == 'abrir|acessarYoutube':
+        elif grupo == 'abrir|acessarYoutube' and 'youtube' in frase:
             falar('Acessando Youtube')
             SystemInfo.abrir_youtube()
-        elif grupo == 'abrir|acessarFacebook':
+        elif grupo == 'abrir|acessarFacebook' and 'facebook' in frase :
             falar('Acessando Facebook')
             SystemInfo.abrir_facebook()
-        elif grupo == 'abrir|acessarInstagram':
+        elif grupo == 'abrir|acessarInstagram' and 'instagram' in frase:
             falar('Acessando Instragram')
             SystemInfo.abrir_instagram()
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'dolar' in frase:
@@ -144,7 +154,6 @@ class Executar:
         elif grupo == 'pesquisa|buscarCep':
             falar('Buscando o CEP informado ...')
             falar(SystemInfo.buscar_endereço(frase))
-
 
 
         # # falar(resultado e a qual grupo ele pertence)

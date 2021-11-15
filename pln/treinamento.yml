@@ -198,10 +198,20 @@ comandos:
     entrada: procure para mim
     grupo: pesquisa
     acao: pesquisaWeb
-
-
-
-
-
-
-
+#Comandos relacionados a classificação de imagem
+  - comando:
+    entrada: classicar imagens
+    grupo: classificar
+    acao: classificarImagens
+  - comando:
+    entrada: diferencie essas imagens
+    grupo: classificar
+    acao: classificarImagens
+  - comando:
+    entrada: classifique essas imagens
+    grupo: classificar
+    acao: classificarImagens
+  - comando:
+    entrada: identifique essas imagens
+    grupo: classificar
+    acao: classificarImagens
