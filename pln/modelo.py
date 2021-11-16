@@ -57,7 +57,7 @@ model = Sequential()
 model.add(LSTM(128))
 model.add(Dense(len(saida_dados), activation='softmax'))
 
-model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 model.fit(dados_entrada, saida_dados, epochs=500)
 

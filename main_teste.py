@@ -8,9 +8,8 @@ import vosk
 import sys
 import pyttsx3
 from unidecode import unidecode
-
 import comandos
-from pln.calssificador import classificar
+
 
 ### ----------- TEXTO EM VOZ ----------- ###
 
@@ -109,7 +108,7 @@ try:
                 resultado = json.loads(resultado)
 
                 if resultado is not None:
-
+                    resultado = resultado['text']
                     resultado = unidecode(resultado)
 
                     if resultado != "":
