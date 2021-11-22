@@ -170,6 +170,9 @@ class Executar:
         elif grupo == 'abrir|notepad':
             falar('Abrindo o bloco de notas')
             subprocess.Popen('notepad.exe')
+        elif grupo == 'abrir|abrirCalculadora':
+            falar('Abrindo a calculadora')
+            subprocess.Popen('calc.exe')
         elif grupo == 'abrir|abrirNavegador':
             falar('Abrindo o navegador')
             SystemInfo.abrir_navegador()
