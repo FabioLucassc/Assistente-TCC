@@ -13,14 +13,14 @@ diretorio = "C:"
 
 # print(diretorio)
 palavra = ""
-diretorio1 =""
+diretorio1 ="C:"
 # print(os.listdir(diretorio1))
 while(True):
-   diretorio1 += palavra
    palavra = input('Diretorio: ')
    if(palavra == "D:"):
        palavra = ""
        diretorio1 = "D:\\"
        print(os.listdir(diretorio1))
    else:
-     break
+       diretorio1 += "\\"+palavra
+       print(os.listdir(diretorio1))
