@@ -181,19 +181,19 @@ class Executar:
         elif grupo == 'abrir|acessarYoutube' and 'youtube' in frase:
             falar('Acessando Youtube')
             SystemInfo.abrir_youtube()
-        elif grupo == 'abrir|acessarGoogle' and 'youtube' not in frase:
+        elif grupo == 'abrir|acessarYoutube' and 'youtube' not in frase:
             falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
             SystemInfo.pesquisar_internet(frase)
         elif grupo == 'abrir|acessarFacebook' and 'facebook' in frase:
             falar('Acessando Facebook')
             SystemInfo.abrir_facebook()
-        elif grupo == 'abrir|acessarGoogle' and 'facebook' not in frase:
+        elif grupo == 'abrir|acessaracebook' and 'facebook' not in frase:
             falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
             SystemInfo.pesquisar_internet(frase)
         elif grupo == 'abrir|acessarInstagram' and 'instagram' in frase:
             falar('Acessando Instragram')
             SystemInfo.abrir_instagram()
-        elif grupo == 'abrir|acessarGoogle' and 'instagram' not in frase:
+        elif grupo == 'abrir|acessarInstagram' and 'instagram' not in frase:
             falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
             SystemInfo.pesquisar_internet(frase)
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'dolar' in frase:
