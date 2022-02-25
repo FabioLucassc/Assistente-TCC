@@ -6,7 +6,7 @@ caminho = path.join(path.expanduser("~"))
 diretorio = ""
 
 while (True):
-    palavra = input('Diretorio: ')
+    palavra = input('Diretorio inicial: ')
     if (palavra == "D:"):
         palavra = ""
         diretorio = "D:\\"
@@ -17,7 +17,8 @@ while (True):
                 diretorio += "\\" + palavra
             except:
                 print("diretorio não encontrado")
-                break 
+                print(diretorio)
+
     else:
         diretorio += "\\" + palavra
         print(os.listdir(diretorio))
