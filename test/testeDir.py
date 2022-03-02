@@ -1,5 +1,6 @@
 import os
 import string
+import subprocess
 from os import path
 
 alfabeto = list(string.ascii_lowercase)
@@ -78,13 +79,19 @@ while (True):
 
                 palavra = input("Qual diretorio ?\n" + str(os.listdir(diretorio)) + "\n")
                 diretorio += "\\" + palavra
-                os.listdir(diretorio)
+                # if ((".txt" or ".lnk" or ".exe" or ".docx" or ".xls") in diretorio):
+                if (".lnk" in diretorio):
+                    # subprocess.Popen(f'notepad.exe "{diretorio}"')
+                    os.startfile(diretorio)
+                else:
+                    os.listdir(diretorio)
 
             except:
                 print("diretorio não encontrado")
                 if (diretorio == palavra.upper() + ":\\"):
+                    print("Por favor selecione um disco válido!")
                     break
                 diretorio = diretorio_anterior
 
     else:
-        print("Por favor selecione um disco valido!")
+        print("Por favor selecione um disco válido!")
