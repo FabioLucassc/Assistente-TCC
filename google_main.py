@@ -6,6 +6,9 @@ import speech_recognition as sr
 from unidecode import unidecode
 
 import comandos
+from google_teste_main import reconhecedor
+
+
 
 reconhecedor = sr.Recognizer()
 

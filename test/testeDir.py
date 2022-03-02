@@ -8,7 +8,9 @@ diretorio = ""
 diretorio_anterior = ""
 
 while (True):
+
     palavra = input('Diretorio inicial: ')
+
     if (palavra == "D:"):
 
         palavra = ""
@@ -50,3 +52,5 @@ while (True):
 
                 print("diretorio não encontrado")
                 diretorio = diretorio_anterior
+    else:
+        print("Disco não encontrado")
