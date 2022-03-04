@@ -4,9 +4,21 @@ from os import path
 import pyttsx3
 import speech_recognition as sr
 from unidecode import unidecode
-
 import comandos
+import Microfone as m
 
+mic = m.cMicrofone()
+
+caminho = ''
+diretorio = 'D:\\'
+
+while diretorio != "navegar":
+    caminho += diretorio + "\\"
+    diretorio = mic.Ouvir()
+    print(diretorio)
+
+print(caminho)
+subprocess.Popen(f'explorer "{caminho}"')
 reconhecedor = sr.Recognizer()
 
 comandos.boas_vindas()
