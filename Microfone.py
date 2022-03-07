@@ -10,7 +10,7 @@ class cMicrofone:
 
         with sr.Microphone() as source:
             reconhecedor.adjust_for_ambient_noise(source, 1)
-            print("Listening....")
+            # print("Listening....")
             while (True):
                 try:
 

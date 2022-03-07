@@ -17,6 +17,7 @@ diretorio_anterior = ""
 while (True):
     comandos.falar("Qual disco inicial ?")
     palavra = mic.Ouvir()
+    print(palavra)
 
     # palavra = input('Qual disco inicial: ')
 

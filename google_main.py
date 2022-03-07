@@ -17,7 +17,8 @@ with sr.Microphone() as source:
         try:
             reconhecedor.adjust_for_ambient_noise(source, 1)
             audio = reconhecedor.listen(source)
-            resultado = (reconhecedor.recognize_google(audio, language='pt-BR', show_all=True))
+            # resultado = (reconhecedor.recognize_google(audio, language='pt-BR', show_all=True))
+            resultado = (reconhecedor.recognize_google(audio, language='pt-BR')).lower()
             print(resultado)
             resultado = str(resultado)
             print(resultado)
