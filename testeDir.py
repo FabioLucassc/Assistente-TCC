@@ -1,4 +1,5 @@
 import os
+import re
 import string
 import subprocess
 from os import path
@@ -20,13 +21,10 @@ while (True):
     palavra = mic.Ouvir()
     print(palavra)
 
-    # palavra = input('Qual disco inicial: ')
-
     if ((palavra.lower() in alfabeto) or ("de" in palavra.lower())):
         # palavra = ""
         diretorio = "D:\\"
-        # diretorio = palavra.upper()+":\\"
-        # diretorio = palavra.upper()+":\\"
+
         diretorio_anterior = diretorio
 
         while (True):
@@ -36,12 +34,22 @@ while (True):
 
             try:
 
-                print("Qual diretorio ?\n" + str(os.listdir(diretorio)) + "\n")
+                lista = os.listdir(diretorio)
+                print("Qual diretorio ?\n" + str(lista) + "\n")
                 palavra = unidecode((mic.Ouvir()).lower())
+
+                str_match = [x for x in comandos.SystemInfo.lower_lista(lista) if re.search(palavra, x)]
+
+                palavra = str(str_match)
+                simbolos = '[]\''
+
+                for i in simbolos:
+                    palavra = palavra.replace(i, '')
+
+                print(palavra)
                 diretorio += "\\" + palavra
                 # if ((".txt" or ".lnk" or ".exe" or ".docx" or ".xls") in diretorio):
                 if (".lnk" in diretorio):
-                    # subprocess.Popen(f'notepad.exe "{diretorio}"')
                     os.startfile(diretorio)
                     diretorio = diretorio_anterior
                 else:

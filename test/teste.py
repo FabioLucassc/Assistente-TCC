@@ -1,3 +1,4 @@
+import os
 import string
 import urllib.request, json
 import re
@@ -7,4 +8,26 @@ import re
 # print(data)
 # print(data['main']['temp'])
 # print(data['weather'])
+
+lista = os.listdir('D:\\Users\\fabio\\Desktop')
+
+# pattern=re.compile(r'Blitz')
+
+str_match = [x for x in lista if re.search('blitz', x)]
+print(str_match)
+
+word1 = str(str_match)
+word2 = '[]\''
+
+for i in word2:
+    word1 = word1.replace(i, '')
+
+print(word1)
+
+a = (map(lambda x: x.lower(), lista))
+b = list(a)
+print(b)
+
+os.startfile('D:\\Users\\fabio\\Desktop\\'+ word1)
+
 

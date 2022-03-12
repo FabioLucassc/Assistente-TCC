@@ -149,6 +149,12 @@ class SystemInfo:
 
         return wb.open_new_tab('http://google.com/search?q='+ retorno)
 
+    @staticmethod
+    def lower_lista(lista):
+        a = (map(lambda x: x.lower(), lista))
+        b = list(a)
+        return b
+
 
 class Executar:
 
