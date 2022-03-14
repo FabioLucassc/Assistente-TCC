@@ -46,10 +46,10 @@ while (True):
                 for i in simbolos:
                     palavra = palavra.replace(i, '')
 
-                print(palavra)
                 diretorio += "\\" + palavra
-                # if ((".txt" or ".lnk" or ".exe" or ".docx" or ".xls") in diretorio):
-                if (".lnk" in diretorio):
+
+                # if (('.txt' or '.lnk' or '.exe' or '.docx' or '.xls') in diretorio):
+                if ("." in diretorio):
                     os.startfile(diretorio)
                     diretorio = diretorio_anterior
                 else:

@@ -28,6 +28,13 @@ a = (map(lambda x: x.lower(), lista))
 b = list(a)
 print(b)
 
-os.startfile('D:\\Users\\fabio\\Desktop\\'+ word1)
+# os.startfile('D:\\Users\\fabio\\Desktop\\'+ word1)
 
 
+# index = lista.index(1)
+
+teste = lista.__getitem__(0)
+print('The index of i:', str(teste))
+
+for i in range(len(lista)):
+    print(lista.__getitem__(i))
