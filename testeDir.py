@@ -14,7 +14,7 @@ caminho = path.join(path.expanduser("~"))
 
 diretorio = ""
 diretorio_anterior = ""
-
+listadir = []
 
 while (True):
     comandos.falar("Qual disco inicial ?")
@@ -27,6 +27,8 @@ while (True):
 
         diretorio_anterior = diretorio
 
+        listadir.append(diretorio_anterior)
+
         while (True):
 
             diretorio_anterior = diretorio
@@ -35,18 +37,23 @@ while (True):
             try:
 
                 lista = os.listdir(diretorio)
-                print("Qual diretorio ?\n" + str(lista) + "\n")
+                print("\nQual diretorio ?\n" + str(lista) + "\n")
                 palavra = unidecode((mic.Ouvir()).lower())
 
-                str_match = [x for x in comandos.SystemInfo.lower_lista(lista) if re.search(palavra, x)]
+                if palavra == "voltar" and len(listadir) > 1:
+                    diretorio = listadir.__getitem__(len(listadir) - 2)
+                    listadir.remove(listadir.__getitem__(len(listadir) - 1))
+                else:
+                    str_match = [x for x in comandos.SystemInfo.lower_lista(lista) if re.search(palavra, x)]
 
-                palavra = str(str_match)
-                simbolos = '[]\''
+                    palavra = str(str_match)
+                    simbolos = '[]\''
 
-                for i in simbolos:
-                    palavra = palavra.replace(i, '')
+                    for i in simbolos:
+                        palavra = palavra.replace(i, '')
 
-                diretorio += "\\" + palavra
+                    if palavra != "":
+                        diretorio += "\\" + palavra
 
                 # if (('.txt' or '.lnk' or '.exe' or '.docx' or '.xls') in diretorio):
                 if ("." in diretorio):
@@ -54,6 +61,10 @@ while (True):
                     diretorio = diretorio_anterior
                 else:
                     os.listdir(diretorio)
+                    if not listadir.__contains__(diretorio):
+                        listadir.append(diretorio)
+
+                print(listadir)
 
             except:
                 print("diretorio não encontrado")
