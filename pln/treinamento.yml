@@ -211,3 +211,44 @@ comandos:
     entrada: busque para mim
     grupo: pesquisa
     acao: pesquisaWeb
+  #Comandos relacionados a navegação por diretóros
+  - comando:
+    entrada: disco de
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: disco c
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: abrir disco de
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: abrir disco c
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: abrir raiz
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: disco
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: navegar disco de
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: navegar disco d
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: navegar disco c
+    grupo: navegacao
+    acao: navegarDiretorio
+  - comando:
+    entrada: navegar disco se
+    grupo: navegacao
+    acao: navegarDiretorio
