@@ -7,6 +7,7 @@ from unidecode import unidecode
 import comandos
 import Microfone as m
 
+comandos.boas_vindas()
 mic = m.cMicrofone()
 
 caminho = ''
