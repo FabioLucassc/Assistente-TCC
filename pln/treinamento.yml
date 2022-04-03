@@ -68,9 +68,9 @@ comandos:
     acao: retornarClima
   #Comandos relacionados a Cotação de Moedas
   - comando:
-    entrada: dólar
+    entrada: dolar
     grupo: cotacao
-    acao: retornarCotaçãoAtual
+    acao: retornarCotacaoAtual
   - comando:
     entrada: qual o valor do dólar
     grupo: cotacao
@@ -84,11 +84,11 @@ comandos:
     grupo: cotacao
     acao: retornarCotacaoAtual
   - comando:
-    entrada: qual a cotação do dólar
+    entrada: qual a cotacao do dólar
     grupo: cotacao
     acao: retornarCotacaoAtual
   - comando:
-    entrada: qual o preço do dólar
+    entrada: qual o preço do dolar
     grupo: cotacao
     acao: retornarCotacaoAtual
   - comando:

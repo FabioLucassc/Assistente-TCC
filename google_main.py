@@ -19,9 +19,8 @@ with sr.Microphone() as source:
             audio = reconhecedor.listen(source)
             # resultado = (reconhecedor.recognize_google(audio, language='pt-BR', show_all=True))
             resultado = (reconhecedor.recognize_google(audio, language='pt-BR')).lower()
-            print(resultado)
-            resultado = str(resultado)
-            print(resultado)
+
+            print("Fala Reconhecida: "+resultado)
 
             if resultado is not None:
 

@@ -170,7 +170,6 @@ class SystemInfo:
         mic = m.cMicrofone()
 
         alfabeto = list(string.ascii_lowercase)
-        caminho = path.join(path.expanduser("~"))
 
         diretorio = ""
         diretorio_anterior = ""
@@ -181,56 +180,68 @@ class SystemInfo:
             palavra = mic.Ouvir()
             print(palavra)
 
-            if ((palavra.lower() in alfabeto) or ("de" in palavra.lower())):
-                # palavra = ""
+            # if ((palavra.lower() in alfabeto) or ("de" in palavra.lower())):
+
+            if "de" in palavra.lower():
+
                 diretorio = "D:\\"
+
+            elif((" c" in palavra.lower()) or ("se" in palavra.lower())):
+
+                diretorio = "C:\\"
+            else:
+                falar("Desculpe, Não consegui encontrar o disco...")
+                falar("Saindo do modo navegação por diretórios")
+                break
+
+
+            diretorio_anterior = diretorio
+
+            listadir.append(diretorio_anterior)
+
+            while (True):
 
                 diretorio_anterior = diretorio
 
-                listadir.append(diretorio_anterior)
+                try:
 
-                while (True):
+                    lista = os.listdir(diretorio)
+                    print("\nQual diretorio ?\n" + str(lista) + "\n")
+                    # falar("\nQual diretorio ?\n" + str(lista) + "\n")
+                    palavra = unidecode((mic.Ouvir()).lower())
 
-                    diretorio_anterior = diretorio
+                    if palavra == "voltar" and len(listadir) > 1:
+                        diretorio = listadir.__getitem__(len(listadir) - 2)
+                        listadir.remove(listadir.__getitem__(len(listadir) - 1))
+                    else:
+                        str_match = [x for x in comandos.SystemInfo.lower_lista(lista) if re.search(palavra, x)]
 
-                    try:
+                        palavra = str(str_match)
+                        simbolos = '[]\''
 
-                        lista = os.listdir(diretorio)
-                        print("\nQual diretorio ?\n" + str(lista) + "\n")
-                        palavra = unidecode((mic.Ouvir()).lower())
+                        for i in simbolos:
+                            palavra = palavra.replace(i, '')
 
-                        if palavra == "voltar" and len(listadir) > 1:
-                            diretorio = listadir.__getitem__(len(listadir) - 2)
-                            listadir.remove(listadir.__getitem__(len(listadir) - 1))
-                        else:
-                            str_match = [x for x in comandos.SystemInfo.lower_lista(lista) if re.search(palavra, x)]
+                        if palavra != "":
+                            diretorio += "\\" + palavra
 
-                            palavra = str(str_match)
-                            simbolos = '[]\''
-
-                            for i in simbolos:
-                                palavra = palavra.replace(i, '')
-
-                            if palavra != "":
-                                diretorio += "\\" + palavra
-
-                        # if (('.txt' or '.lnk' or '.exe' or '.docx' or '.xls') in diretorio):
-                        if ("." in diretorio):
-                            os.startfile(diretorio)
-                            diretorio = diretorio_anterior
-                        else:
-                            os.listdir(diretorio)
-                            if not listadir.__contains__(diretorio):
-                                listadir.append(diretorio)
-
-                        print(listadir)
-
-                    except:
-                        print("diretorio não encontrado")
-                        if (diretorio == palavra.upper() + ":\\"):
-                            print("Por favor selecione um disco válido!")
-                            break
+                    # if (('.txt' or '.lnk' or '.exe' or '.docx' or '.xls') in diretorio):
+                    if ("." in diretorio):
+                        os.startfile(diretorio)
                         diretorio = diretorio_anterior
+                    else:
+                        os.listdir(diretorio)
+                        if not listadir.__contains__(diretorio):
+                            listadir.append(diretorio)
+
+                    print(listadir)
+
+                except:
+                    print("diretorio não encontrado")
+                    if (diretorio == palavra.upper() + ":\\"):
+                        print("Por favor selecione um disco válido!")
+                        break
+                    diretorio = diretorio_anterior
 
             else:
                 print("Por favor selecione um disco válido!")
@@ -295,6 +306,7 @@ class Executar:
             SystemInfo.pesquisar_internet(frase)
         elif grupo == 'navegacao|navegarDiretorio':
             falar('Ok, abrindo a navegação por diretório!')
+            SystemInfo.navegacao()
 
 
         # Mostrar informações (resultado e a qual grupo ele pertence)

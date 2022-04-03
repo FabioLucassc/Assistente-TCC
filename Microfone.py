@@ -1,4 +1,5 @@
 import speech_recognition as sr
+from unidecode import unidecode
 
 reconhecedor = sr.Recognizer()
 
@@ -18,6 +19,8 @@ class cMicrofone:
                     resultado = reconhecedor.recognize_google(audio, language='pt-BR').lower()
 
                     if resultado is not None:
+
+                        resultado = unidecode(resultado)
 
                         return resultado
 

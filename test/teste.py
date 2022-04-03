@@ -38,3 +38,10 @@ print('The index of i:', str(teste))
 
 for i in range(len(lista)):
     print(lista.__getitem__(i))
+
+
+
+if "c" == "c":
+    print("igual")
+else:
+    print("diferente")
