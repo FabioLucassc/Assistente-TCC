@@ -3,31 +3,33 @@ from os import path
 import pyttsx3
 import speech_recognition as sr
 from unidecode import unidecode
-
+import Microfone as m
 import comandos
+
+mic = m.cMicrofone()
 
 reconhecedor = sr.Recognizer()
 
-comandos.boas_vindas()
-
 # Utilizar o microfone para capturar audio
 with sr.Microphone() as source:
+
     while True:
 
-        try:
-            reconhecedor.adjust_for_ambient_noise(source, 1)
-            audio = reconhecedor.listen(source)
-            # resultado = (reconhecedor.recognize_google(audio, language='pt-BR', show_all=True))
-            resultado = (reconhecedor.recognize_google(audio, language='pt-BR')).lower()
+        palavra = mic.Ouvir()
 
-            print("Fala Reconhecida: "+resultado)
+        if palavra == 'boa noite':
 
-            if resultado is not None:
+            print("Ouvindo...")
+            comandos.boas_vindas()
 
-                resultado = unidecode(resultado)
+            try:
+
+                resultado = mic.Ouvir()
+
+                print("Fala Reconhecida: " + str(resultado))
 
                 if resultado != "":
                     comandos.Executar.excutar_comandos(resultado)
 
-        except Exception as e:
-            print((type(e).__name__ + ': ' + str(e)))
+            except Exception as e:
+                print((type(e).__name__ + ': ' + str(e)))

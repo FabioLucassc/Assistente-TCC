@@ -206,9 +206,11 @@ class SystemInfo:
                 try:
 
                     lista = os.listdir(diretorio)
+                    comandos.falar("Qual diretório?")
                     print("\nQual diretorio ?\n" + str(lista) + "\n")
                     # falar("\nQual diretorio ?\n" + str(lista) + "\n")
                     palavra = unidecode((mic.Ouvir()).lower())
+                    # print(palavra)
 
                     if palavra == "voltar" and len(listadir) > 1:
                         diretorio = listadir.__getitem__(len(listadir) - 2)
@@ -218,6 +220,17 @@ class SystemInfo:
 
                         palavra = str(str_match)
                         simbolos = '[]\''
+
+                        if (str_match.__len__() > 1):
+                            dirduplicado = (f"Foram encontrados os seguintes diretórios: {str(str_match)}. Diga qual deles deseja acessar.")
+                            print(dirduplicado)
+                            comandos.falar(dirduplicado)
+
+                            while True:
+                                diroficial = mic.Ouvir()
+                                palavra = [x for x in comandos.SystemInfo.lower_lista(lista) if diroficial == x]
+                                if (palavra != ''):
+                                    break
 
                         for i in simbolos:
                             palavra = palavra.replace(i, '')
