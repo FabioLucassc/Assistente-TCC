@@ -16,7 +16,8 @@ class cMicrofone:
 
                 try:
 
-                    audio = reconhecedor.listen(source, phrase_time_limit=6, timeout=6)
+                    # audio = reconhecedor.listen(source, phrase_time_limit=6, timeout=6)
+                    audio = reconhecedor.listen(source)
                     resultado = reconhecedor.recognize_google(audio, language='pt-BR')
 
                     # resultado = (reconhecedor.recognize_google(audio, language='pt-BR', show_all=True))
