@@ -190,6 +190,9 @@ class SystemInfo:
 
                 diretorio = "C:\\"
             else:
+                print('🎤 - Audio captado: '+ palavra)
+                print("❖ - Assistente: Desculpe, Não consegui encontrar o disco... \n Saindo do modo navegação por diretórios")
+                print('________________________________')
                 falar("Desculpe, Não consegui encontrar o disco...")
                 falar("Saindo do modo navegação por diretórios")
                 break
@@ -323,4 +326,4 @@ class Executar:
 
 
         # Mostrar informações (resultado e a qual grupo ele pertence)
-        print('Texto: {} - Grupo: {}'.format(frase, grupo))
+        print('🎤 - Audio captado: {} - Grupo: {}'.format(frase, grupo))

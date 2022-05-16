@@ -19,7 +19,7 @@ maior_sequencia = max([len(bytes(x.encode('utf-8'))) for x in entradas])
 
 print('Maior seq:', maior_sequencia)
 
-# Criar dataset one-hot (número de examplos, tamanho da seq, num caracteres)
+# Criar dataset one-hot (número de exemplos, tamanho da seq, num caracteres)
 
 # entrada de dados one-hot encoding
 

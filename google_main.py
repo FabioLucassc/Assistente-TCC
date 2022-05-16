@@ -7,7 +7,6 @@ import Microfone as m
 import comandos
 
 mic = m.cMicrofone()
-
 reconhecedor = sr.Recognizer()
 
 # Utilizar o microfone para capturar audio
@@ -19,7 +18,9 @@ with sr.Microphone() as source:
 
         if palavra == 'boa noite':
 
-            print("Ouvindo...")
+            print("🎤 - Audio Captado: "+palavra)
+            print('________________________________')
+            print("❖ - Assistente: Ouvindo...")
             comandos.boas_vindas()
 
             try:

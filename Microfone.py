@@ -2,7 +2,7 @@ import speech_recognition as sr
 from unidecode import unidecode
 
 reconhecedor = sr.Recognizer()
-
+# resultado = ''
 
 
 class cMicrofone:
@@ -10,7 +10,7 @@ class cMicrofone:
     def Ouvir(self):
 
         with sr.Microphone() as source:
-            reconhecedor.adjust_for_ambient_noise(source, 3)
+            reconhecedor.adjust_for_ambient_noise(source)
             # print("Listening....")
             while (True):
 
@@ -19,7 +19,6 @@ class cMicrofone:
                     # audio = reconhecedor.listen(source, phrase_time_limit=6, timeout=6)
                     audio = reconhecedor.listen(source)
                     resultado = reconhecedor.recognize_google(audio, language='pt-BR')
-
                     # resultado = (reconhecedor.recognize_google(audio, language='pt-BR', show_all=True))
 
                     if resultado is not None:
@@ -29,4 +28,5 @@ class cMicrofone:
                         return resultado
 
                 except Exception as e:
-                    print(f'Não foi possível identificar a fala. Fale novamente.')
+                    print('❖ - Assistente: Não foi possível identificar a fala. Fale novamente.')
+                    # print('🎤 - Audio Captado: ' +resultado)
