@@ -268,62 +268,81 @@ class Executar:
     def excutar_comandos(frase):
 
         grupo = classificar(frase)
+        fala = ''
 
         if grupo == 'horario|retornarHorario':
-            falar(SystemInfo.obter_horario())
+            fala = SystemInfo.obter_horario()
+            falar(fala)
         elif grupo == 'data|retornarData':
-            falar(SystemInfo.obter_data())
+            fala = SystemInfo.obter_data()
+            falar(fala)
             # Abrir softwares listados
         elif grupo == 'cumprimento|responderCumprimento':
-            falar(SystemInfo.cumprimentar())
+            fala = SystemInfo.cumprimentar()
+            falar(fala)
             # Abrir softwares listados
         elif grupo == 'abrir|notepad':
-            falar('Abrindo o bloco de notas')
+            fala = 'Abrindo o bloco de notas'
+            falar(fala)
             subprocess.Popen('notepad.exe')
         elif grupo == 'abrir|abrirNavegador':
-            falar('Abrindo o navegador')
+            fala = 'Abrindo o navegador'
+            falar(fala)
             SystemInfo.abrir_navegador()
             # Abrir softwares sites
         elif grupo == 'abrir|acessarGoogle' and 'google' in frase:
-            falar('Acessando Google')
+            fala = 'Acessando Google'
+            falar(fala)
             SystemInfo.abrir_google()
         elif grupo == 'abrir|acessarGoogle' and 'google' not in frase:
-            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            fala = 'Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!'
+            falar(fala)
             SystemInfo.pesquisar_internet(frase)
         elif grupo == 'abrir|acessarYoutube' and 'youtube' in frase:
-            falar('Acessando Youtube')
+            fala = 'Acessando Youtube'
+            falar(fala)
             SystemInfo.abrir_youtube()
         elif grupo == 'abrir|acessarYoutube' and 'youtube' not in frase:
-            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            fala = 'Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!'
+            falar(fala)
             SystemInfo.pesquisar_internet(frase)
         elif grupo == 'abrir|acessarFacebook' and 'facebook' in frase:
-            falar('Acessando Facebook')
+            fala = 'Acessando Facebook'
+            falar(fala)
             SystemInfo.abrir_facebook()
         elif grupo == 'abrir|acessaracebook' and 'facebook' not in frase:
-            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            fala = 'Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!'
+            falar(fala)
             SystemInfo.pesquisar_internet(frase)
         elif grupo == 'abrir|acessarInstagram' and 'instagram' in frase:
-            falar('Acessando Instragram')
+            fala = 'Acessando Instragram'
+            falar(fala)
             SystemInfo.abrir_instagram()
         elif grupo == 'abrir|acessarInstagram' and 'instagram' not in frase:
-            falar('Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!')
+            fala = 'Acho que não entendi muito bem oque você disse, estou realizando uma pesquisa na web para ajudar!'
+            falar(fala)
             SystemInfo.pesquisar_internet(frase)
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'dolar' in frase:
             falar('Buscando valor atual do dólar ...')
-            falar(SystemInfo.obter_dolar())
+            fala = SystemInfo.obter_dolar()
+            falar(fala)
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'euro' in frase:
             falar('Buscando valor atual do euro ...')
-            falar(SystemInfo.obter_dolar())
+            fala = SystemInfo.obter_dolar()
+            falar(fala)
         elif grupo == 'pesquisa|buscarCep':
             falar('Buscando o CEP informado ...')
-            falar(SystemInfo.buscar_endereco(frase))
+            fala = SystemInfo.buscar_endereco(frase)
+            falar(fala)
         elif grupo == 'pesquisa|pesquisaWeb':
-            falar('Ok, já estou pesquisando o\'que você me disse!')
+            fala = 'Ok, já estou pesquisando o\'que você me disse!'
+            falar(fala)
             SystemInfo.pesquisar_internet(frase)
         elif grupo == 'navegacao|navegarDiretorio':
             falar('Ok, abrindo a navegação por diretório!')
             SystemInfo.navegacao()
 
-
         # Mostrar informações (resultado e a qual grupo ele pertence)
-        print('🎤 - Audio captado: {} - Grupo: {}'.format(frase, grupo))
+        print("\n\n❖ - Assistente: Ouvindo...")
+        print('🎤 - Audio captado: {} - Grupo: {}\n'.format(frase, grupo))
+        print(fala)
