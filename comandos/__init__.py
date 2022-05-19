@@ -344,5 +344,7 @@ class Executar:
 
         # Mostrar informações (resultado e a qual grupo ele pertence)
         print("\n\n❖ - Assistente: Ouvindo...")
+        print('________________________________')
         print('🎤 - Audio captado: {} - Grupo: {}\n'.format(frase, grupo))
-        print(fala)
+        print('________________________________')
+        print('❖ - Assistente: '+fala)

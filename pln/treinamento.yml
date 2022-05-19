@@ -22,7 +22,7 @@ comandos:
     acao: retornarHorario
    #Comandos relacionados a Data
   - comando:
-    entrada: que dia é hoje
+    entrada: que dia e hoje
     grupo: data
     acao: retornarData
   - comando:
@@ -39,7 +39,7 @@ comandos:
     acao: retornarData
   #Comandos relacionados ao Clima
   - comando:
-    entrada: previsão do tempo
+    entrada: previsao do tempo
     grupo: clima
     acao: retornarClima
   - comando:
