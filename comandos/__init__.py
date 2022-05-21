@@ -177,8 +177,9 @@ class SystemInfo:
 
         while (True):
             comandos.falar("Qual disco inicial ?")
+            print("❖ - Assistente: Qual disco inicial ?")
             palavra = mic.Ouvir()
-            print(palavra)
+            print('🎤 - Audio captado: '+palavra)
 
             # if ((palavra.lower() in alfabeto) or ("de" in palavra.lower())):
 
@@ -191,8 +192,8 @@ class SystemInfo:
                 diretorio = "C:\\"
             else:
                 print('🎤 - Audio captado: '+ palavra)
-                print("❖ - Assistente: Desculpe, Não consegui encontrar o disco... \n Saindo do modo navegação por diretórios")
-                print('________________________________')
+                print("❖ - Assistente: Desculpe, Não consegui encontrar o disco... \n ❖ - Assistente: Saindo do modo navegação por diretórios")
+                print('\n________________________________\n')
                 falar("Desculpe, Não consegui encontrar o disco...")
                 falar("Saindo do modo navegação por diretórios")
                 break
@@ -210,10 +211,13 @@ class SystemInfo:
 
                     lista = os.listdir(diretorio)
                     comandos.falar("Qual diretório?")
-                    print("\nQual diretorio ?\n" + str(lista) + "\n")
-                    # falar("\nQual diretorio ?\n" + str(lista) + "\n")
+                    print('\n________________________________\n')
+                    print("\n❖ - Assistente:Qual diretorio ?\n"
+                          +'________________________________\n'
+                          +str(lista)
+                          + '________________________________\n\n')
                     palavra = unidecode((mic.Ouvir()).lower())
-                    # print(palavra)
+                    print('🎤 - Audio captado: '+palavra)
 
                     if palavra == "voltar" and len(listadir) > 1:
                         diretorio = listadir.__getitem__(len(listadir) - 2)
@@ -226,7 +230,7 @@ class SystemInfo:
 
                         if (str_match.__len__() > 1):
                             dirduplicado = (f"Foram encontrados os seguintes diretórios: {str(str_match)}. Diga qual deles deseja acessar.")
-                            print(dirduplicado)
+                            print('❖ - Assistente: ' +dirduplicado)
                             comandos.falar(dirduplicado)
 
                             while True:
@@ -253,14 +257,14 @@ class SystemInfo:
                     print(listadir)
 
                 except:
-                    print("diretorio não encontrado")
+                    print("❖ - Assistente: diretorio não encontrado")
                     if (diretorio == palavra.upper() + ":\\"):
                         print("Por favor selecione um disco válido!")
                         break
                     diretorio = diretorio_anterior
 
             else:
-                print("Por favor selecione um disco válido!")
+                print('Por favor selecione um disco válido!')
 
 class Executar:
 
@@ -344,7 +348,7 @@ class Executar:
 
         # Mostrar informações (resultado e a qual grupo ele pertence)
         print("\n\n❖ - Assistente: Ouvindo...")
-        print('________________________________')
+        print('\n________________________________\n')
         print('🎤 - Audio captado: {} - Grupo: {}\n'.format(frase, grupo))
-        print('________________________________')
+        print('\n________________________________\n')
         print('❖ - Assistente: '+fala)

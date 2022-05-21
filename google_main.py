@@ -5,6 +5,7 @@ import speech_recognition as sr
 from unidecode import unidecode
 import Microfone as m
 import comandos
+from pln.calssificador import classificar
 
 mic = m.cMicrofone()
 reconhecedor = sr.Recognizer()
@@ -16,10 +17,12 @@ with sr.Microphone() as source:
 
         palavra = mic.Ouvir()
 
-        if palavra == 'boa noite':
+        grupo = classificar(palavra)
+
+        if grupo == 'cumprimento|responderCumprimento':
 
             print("🎤 - Audio Captado: "+palavra)
-            print('________________________________')
+            print('\n________________________________\n')
             print("❖ - Assistente: Ouvindo...")
             comandos.boas_vindas()
 
