@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Embedding
-from tensorflow.keras.utils import to_categoricaltemp
+from tensorflow.keras.utils import to_categorical
 
 dados = yaml.safe_load(open('treinamento.yml', 'r', encoding='utf-8').read())
 

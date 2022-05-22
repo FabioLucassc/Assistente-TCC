@@ -332,7 +332,7 @@ class Executar:
             falar(fala)
         elif (grupo == 'cotacao|retornarCotacaoAtual') and 'euro' in frase:
             falar('Buscando valor atual do euro ...')
-            fala = SystemInfo.obter_dolar()
+            fala = SystemInfo.obter_euro()
             falar(fala)
         elif grupo == 'pesquisa|buscarCep':
             falar('Buscando o CEP informado ...')
