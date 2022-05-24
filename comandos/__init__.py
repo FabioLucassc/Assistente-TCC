@@ -211,11 +211,13 @@ class SystemInfo:
 
                     lista = os.listdir(diretorio)
                     comandos.falar("Qual diretório?")
-                    print('\n________________________________\n')
-                    print("\n❖ - Assistente:Qual diretorio ?\n"
-                          +'________________________________\n'
-                          +str(lista)
-                          + '________________________________\n\n')
+                    print('________________________________')
+                    print("❖ - Assistente: Qual diretorio ?\n")
+                    print(str(lista))
+                    #for i in lista:
+                        #print(f"-- {i}")
+
+                    print('________________________________')
                     palavra = unidecode((mic.Ouvir()).lower())
                     print('🎤 - Audio captado: '+palavra)
 
@@ -255,11 +257,11 @@ class SystemInfo:
                         if not listadir.__contains__(diretorio):
                             listadir.append(diretorio)
 
-                    print(listadir)
+                    #print(listadir)
 
                 except:
                     print("❖ - Assistente: diretorio não encontrado")
-                    if (diretorio == palavra.upper() + ":\\"):
+                    if (diretorio == str(palavra).upper() + ":\\"):
                         print("Por favor selecione um disco válido!")
                         break
                     diretorio = diretorio_anterior
