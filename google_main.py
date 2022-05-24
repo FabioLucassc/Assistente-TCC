@@ -12,7 +12,6 @@ reconhecedor = sr.Recognizer()
 
 # Utilizar o microfone para capturar audio
 with sr.Microphone() as source:
-
     while True:
 
         palavra = mic.Ouvir()
@@ -20,20 +19,19 @@ with sr.Microphone() as source:
         grupo = classificar(palavra)
 
         if grupo == 'cumprimento|responderCumprimento':
-
-            print("🎤 - Audio Captado: "+palavra)
+            print("🎤 - Audio Captado: " + palavra)
             print('\n________________________________\n')
-            print("❖ - Assistente: Ouvindo...")
-            comandos.boas_vindas()
+        print("❖ - Assistente: Ouvindo...")
+        comandos.boas_vindas()
 
-            try:
+        try:
 
-                resultado = mic.Ouvir()
+            resultado = mic.Ouvir()
 
-                print("Fala Reconhecida: " + str(resultado))
+            print("Fala Reconhecida: " + str(resultado))
 
-                if resultado != "":
-                    comandos.Executar.excutar_comandos(resultado)
+            if resultado != "":
+                comandos.Executar.excutar_comandos(resultado)
 
-            except Exception as e:
-                print((type(e).__name__ + ': ' + str(e)))
+        except Exception as e:
+            print((type(e).__name__ + ': ' + str(e)))
