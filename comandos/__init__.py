@@ -237,6 +237,7 @@ class SystemInfo:
                                 diroficial = mic.Ouvir()
                                 palavra = [x for x in comandos.SystemInfo.lower_lista(lista) if diroficial == x]
                                 if (palavra != ''):
+                                    palavra = palavra[0]
                                     break
 
                         for i in simbolos:
