@@ -67,7 +67,7 @@ class SystemInfo:
 
     @staticmethod
     def abrir_navegador():
-        return wb.open_new_tab('')
+        return wb.open_new_tab('http://www.google.com')
 
     @staticmethod
     def abrir_google():
@@ -292,6 +292,10 @@ class Executar:
             fala = 'Abrindo o bloco de notas'
             falar(fala)
             subprocess.Popen('notepad.exe')
+        elif grupo == 'abrir|abrirCalculadora':
+            fala = 'Abrindo calculadora'
+            falar(fala)
+            subprocess.Popen('calc.exe')
         elif grupo == 'abrir|abrirNavegador':
             fala = 'Abrindo o navegador'
             falar(fala)

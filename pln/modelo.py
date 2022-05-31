@@ -81,5 +81,5 @@ def classificar(text):
 
 
 while True:
-    frase = input('Escreva Algo: ')
+    frase = input('🎤 - Audio captado: ')
     classificar(frase)

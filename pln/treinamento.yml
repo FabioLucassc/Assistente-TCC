@@ -169,6 +169,14 @@ comandos:
     entrada: boa tarde
     grupo: cumprimento
     acao: responderCumprimento
+  - comando:
+    entrada: assistente
+    grupo: cumprimento
+    acao: responderCumprimento
+  - comando:
+    entrada: diogenes
+    grupo: cumprimento
+    acao: responderCumprimento
   #Comandos relacionados a pesquisas
   - comando:
     entrada: localizar cep
