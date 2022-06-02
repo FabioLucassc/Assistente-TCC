@@ -40,8 +40,9 @@
     executadas e respondida com a sintetização de voz.    
     <br />
     <br />
-        <a href=""><strong>PDF TCC »</strong></a>
+        <a href="https://github.com/FabioLucassc/Assistente-TCC/blob/V4/Fundamentacao/TCC%20-%20PROCESSAMENTO%20DE%20LINGUAGEM%20NATURAL%20(ASSISTENTE%20VIRTUAL).pdf"><strong>PDF TCC »</strong></a>
   </p>
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -114,7 +115,7 @@ Project Link: [https://github.com/FabioLucassc/Assistente-TCC](https://github.co
 
 <div align="center">
   <a href="https://github.com/FabioLucassc/Assistente-TCC">
-    <img src="images/QR.png" alt="Logo" width="450" height="350">
+    <img src="images/QR.png" alt="Logo" width="450" height="450">
   </a>
 
 
