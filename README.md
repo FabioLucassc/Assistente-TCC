@@ -14,9 +14,8 @@
 
 <div align="center">
   <a href="https://github.com/FabioLucassc/Assistente-TCC">
-    <img src="images/Assistente TCC.png" alt="Logo" width="250" height="200">
+    <img src="images/Assistente TCC.png" alt="Logo" width="450" height="350">
   </a>
-
 
 <h1 align="center">Diógenes - Assistente Virtual com PLN</h1>
 
@@ -51,18 +50,14 @@
 
 <br />
 
-| FUNÇÃO                   |     STATUS      |
-| ------------------------ | :-------------: |
-| Horário                  | Já implementado |
-| Data                     | Já implementado |
-| Clima                    | Já implementado |
-| Cotação/Moedas           | Já implementado |
-| Abrir softwares          | Já implementado |
-| Abrir sites              | Já implementado |
-| Cumprimentos/Saudações   | Já implementado |
-| Pesquisas Web            | Já implementado |
-| Pesquisa CEP/Endereço    | Já implementado |
-| Navegação por diretórios | Já implementado |
+| BIBLIOTECA        | VERSÃO |
+| ----------------- | :----: |
+| SpeechRecognition | 3.8.1  |
+| PyAudio           | 0.2.11 |
+| Sounddevice       | 0.4.1  |
+| PyTTSX3           |  2.90  |
+| TensorFlow        |  2.6   |
+| Keras             |  2.6   |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -117,7 +112,10 @@ Project Link: [https://github.com/FabioLucassc/Assistente-TCC](https://github.co
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+<div align="center">
+  <a href="https://github.com/FabioLucassc/Assistente-TCC">
+    <img src="images/QR.png" alt="Logo" width="450" height="350">
+  </a>
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/FabioLucassc/Assistente-TCC.svg?style=for-the-badge
