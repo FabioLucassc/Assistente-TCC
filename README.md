@@ -92,7 +92,7 @@ _Abaixo está um exemplo de como você pode como você pode clonar este aplicati
 1. Clonar repositório:
 
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/FabioLucassc/Assistente-TCC.git
    ```
 
 ## License
