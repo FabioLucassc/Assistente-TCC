@@ -140,7 +140,7 @@ Project Link: [https://github.com/FabioLucassc/Assistente-TCC](https://github.co
 
 [license-url]: https://github.com/FabioLucassc/Assistente-TCC/blob/V4/LICENSE.txt
 
-[linkedin-shield-fabio]: https://img.shields.io/badge/-Fabio_Colaço-black.svg?style=for-the-badge&amp;logo=linkedin&amp;amp;color=blue
-[linkedin-shield-vitor]:    https://img.shields.io/badge/Vitor_Brand%C3%A3o-black.svg?style=for-the-badge&amp;logo=linkedin&amp;amp;color=blue
+[linkedin-shield-fabio]: https://img.shields.io/badge/-Fabio_Colaço-blue.svg?style=for-the-badge&amp;logo=linkedin&amp;amp;color=blue
+[linkedin-shield-vitor]:    https://img.shields.io/badge/Vitor_Brand%C3%A3o-blue.svg?style=for-the-badge&amp;logo=linkedin&amp;amp;color=blue
 [linkedin-url-fabio]: https://www.linkedin.com/in/fabiolucas18/
 [linkedin-url-vitor]: https://linkedin.com/in/
