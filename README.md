@@ -5,8 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
+[![LinkedIn][linkedin-shield-fabio]][linkedin-url]
 
 
 
@@ -139,7 +138,7 @@ Project Link: [https://github.com/FabioLucassc/Assistente-TCC](https://github.co
 
 [license-url]: https://github.com/FabioLucassc/Assistente-TCC/blob/V4/LICENSE.txt
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-
-[linkedin-url]: https://linkedin.com/in/
-
+[linkedin-shield-fabio]: https://shields.io/badge/Fabio-blue.svg?logo=linkedin&amp;style=for-the-badge
+[linkedin-shield-vitor]:    https://img.shields.io/badge/Vitor_Brand%C3%A3o-blue.svg?logo=linkedin&amp;style=for-the-badge
+[linkedin-url-fabio]: https://linkedin.com/in/
+[ linkedin-url-vitor]: https://linkedin.com/in/
