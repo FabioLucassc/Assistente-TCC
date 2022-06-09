@@ -5,7 +5,8 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield-fabio]][linkedin-url]
+[![LinkedIn][linkedin-shield-fabio]][linkedin-url-fabio]
+[![LinkedIn][linkedin-shield-vitor]][linkedin-url-vitor]
 
 
 
@@ -24,12 +25,13 @@
 ## Sobre o projeto
 
 <p align="justify">
-    Neste trabalho de conclusão de curso foi realizada a contrução de um assistente virtual, tendo como princípio explorar 
+    Neste trabalho de conclusão de curso foi realizada a construção de um assistente virtual, tendo como princípio explorar 
     a tecnologia para criar meios de facilitar e agilizar a interação homem e máquina, disponibilizando formas de 
     realizar pesquisas, executar aplicativos, buscar algumas informações, realizando essas tratativas através do 
     uso da voz, onde será utilizado o processamento de linguagem natural, com isso também será abrangido o 
     reconhecimento de voz e a síntese de voz.    <br />
   </p>
+
 
 
 <p align="justify">
@@ -138,7 +140,7 @@ Project Link: [https://github.com/FabioLucassc/Assistente-TCC](https://github.co
 
 [license-url]: https://github.com/FabioLucassc/Assistente-TCC/blob/V4/LICENSE.txt
 
-[linkedin-shield-fabio]: https://shields.io/badge/Fabio-blue.svg?logo=linkedin&amp;style=for-the-badge
-[linkedin-shield-vitor]:    https://img.shields.io/badge/Vitor_Brand%C3%A3o-blue.svg?logo=linkedin&amp;style=for-the-badge
-[linkedin-url-fabio]: https://linkedin.com/in/
-[ linkedin-url-vitor]: https://linkedin.com/in/
+[linkedin-shield-fabio]: https://img.shields.io/badge/-Fabio-black.svg?style=for-the-badge&logo=linkedin&amp;color=blue
+[linkedin-shield-vitor]:    https://img.shields.io/badge/-Vitor_Brandão-black.svg?style=for-the-badge&amp;logo=linkedin&amp;amp;color=blue
+[linkedin-url-fabio]: https://www.linkedin.com/in/fabiolucas18/
+[linkedin-url-vitor]: https://linkedin.com/in/
